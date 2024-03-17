@@ -5,7 +5,7 @@
   "main": "zui.scss",
   "repository": {
     "type": "git",
-    "url": "git+https://gitverse.ru/alexander.zharikov/zui"
+    "url": "git+https://github.com/a-zharikov/ui"
   },
   "keywords": [
     "scss",
@@ -20,7 +20,7 @@
   "author": "Alexander Zharikov <mail@zharikov.design>",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitverse.ru/alexander.zharikov/zui"
+    "url": "https://github.com/a-zharikov/ui/issues"
   },
-  "homepage": "https://zharikov.design"
+  "homepage": "https://zui.zharikov.design"
 }
