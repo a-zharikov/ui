@@ -1,0 +1,26 @@
+{
+  "name": "zharikov-ui",
+  "version": "1.0.4",
+  "description": "",
+  "main": "zui.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitverse.ru/alexander.zharikov/zui"
+  },
+  "keywords": [
+    "scss",
+    "variables",
+    "mixin",
+    "breakpoint",
+    "fonts",
+    "reset",
+    "grid",
+    "flex"
+  ],
+  "author": "Alexander Zharikov <mail@zharikov.design>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitverse.ru/alexander.zharikov/zui"
+  },
+  "homepage": "https://zharikov.design"
+}

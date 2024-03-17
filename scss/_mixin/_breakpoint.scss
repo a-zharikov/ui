@@ -1,0 +1,84 @@
+// Media query
+@mixin screen($min-width: null, $max-width: null) {
+  @if $min-width != null and $max-width != null {
+    // Если указаны оба параметра min-width и max-width
+    @media only screen and (min-width: #{$min-width}px) and (max-width: #{$max-width}px) {
+      @content;
+    }
+  }
+  @else if $min-width != null and $max-width == null {
+    // Если указан только min-width
+    @media only screen and (min-width: #{$min-width}px) {
+      @content;
+    }
+  }
+  @else if $min-width == null and $max-width != null {
+    // Если указан только max-width
+    @media only screen and (max-width: #{$max-width}px) {
+      @content;
+    }
+  }
+}
+
+@mixin mq($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: 649px) {
+      @content;
+    }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: 650px) and (max-width: 1023px) {
+      @content;
+    }
+  }
+  @else if $media == laptop {
+    @media only screen and (min-width: 1024px) and (max-width: 1239px) {
+      @content;
+    }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: 1240px) {
+      @content;
+    }
+  }
+}
+
+.__mqDebag {
+  z-index: 100;
+  position: relative;
+
+  @include mq(mobile) {
+    &::after {
+      content: 'Mobile';
+    }
+  }
+  @include mq(tablet) {
+
+    &::after {
+      content: 'Tablet';
+    }
+  }
+  @include mq(laptop) {
+
+    &::after {
+      content: 'Laptop';
+    }
+  }
+  @include mq(desktop) {
+
+    &::after {
+      content: 'Desktop';
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: $zui-4;
+    right: $zui-4;
+    color: $white;
+    font: 20px/20px 'Verdana';
+    background: $headline;
+    padding: $zui-4 $zui-8;
+    border-radius: $zui-8;
+  }
+}

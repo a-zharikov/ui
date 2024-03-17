@@ -1,0 +1,18 @@
+@mixin transition($time: 500) {
+  -webkit-transition: all #{$time}ms ease-in-out;
+  -moz-transition:    all #{$time}ms ease-in-out;
+  -o-transition:      all #{$time}ms ease-in-out;
+  -ms-transition:     all #{$time}ms ease-in-out;
+  transition:         all #{$time}ms ease-in-out;
+}
+
+@mixin transition-delay($time, $delay) {
+  -webkit-transition: all #{$time}ms ease-in-out;
+  -webkit-transition-delay: #{$delay}ms;
+  -o-transition: all #{$time}ms ease-in-out;
+  -o-transition-delay: #{$delay}ms;
+  -moz-transition: all #{$time}ms ease-in-out;
+  -moz-transition-delay: #{$delay}ms;
+  transition: all #{$time}ms ease-in-out;
+  transition-delay: #{$delay}ms;
+}

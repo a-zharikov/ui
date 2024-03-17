@@ -1,0 +1,4 @@
+@mixin text($font, $color: null) {
+  color: if($color != null, $color, $headline);
+  font: $font;
+}

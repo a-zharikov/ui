@@ -1,0 +1,58 @@
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin top_center {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin top_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin top_right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@mixin bottom_center {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin bottom_left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin bottom_right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@mixin left_center {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
+}
+
+@mixin right_center {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0, -50%);
+}

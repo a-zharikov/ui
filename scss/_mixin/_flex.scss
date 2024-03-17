@@ -1,0 +1,24 @@
+$df: flex;
+$di: inline-flex;
+
+$rw: row;
+$rr: row-reverse;
+$cl: column;
+$clr: column-reverse;
+
+$fs: flex-start;
+$fe: flex-end;
+$cr: center;
+$sb: space-between;
+$sa: space-around;
+$bl: baseline;
+$sh: stretch;
+
+
+@mixin flex($fd: $rw, $jc: $fs, $ai: $fs, $gap: 0, $display: null) {
+  display: if($display != null, $di, $df);
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+}

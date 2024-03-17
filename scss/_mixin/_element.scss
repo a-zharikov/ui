@@ -1,0 +1,30 @@
+@mixin border-opacity($property, $border-color: transparent, $opacity: 1) {
+  #{$property}: rgba($border-color, $opacity);
+}
+
+@mixin border($bt: 1px, $br: 1px, $bb: 1px, $bl: 1px, $bc: $border, $opacity: 1 ) {
+  border-top: #{$bt}px solid $bc;
+  border-right: #{$br}px solid $bc;
+  border-bottom: #{$bb}px solid $bc;
+  border-left: #{$bl}px solid $bc;
+  @include border-opacity(border-color, $bc, $opacity);
+}
+
+@mixin break_word(){
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+@mixin text_count($count, $line-height: normal, $include-break-word: true) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $count;
+  -webkit-box-orient: vertical;
+  line-height: $line-height;
+
+  @if $include-break-word {
+    @include break_word();
+  }
+}
