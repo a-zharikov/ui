@@ -9,20 +9,20 @@
   ],
   "creatorBuild" : "34335",
   "files" : {
-    "\/.gitignore " : {
+    "\/.gitignore" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/.gitignore ",
+      "oAP" : "\/.gitignore",
       "oF" : 0
     },
-    "\/.npmignore " : {
+    "\/.npmignore" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/.npmignore ",
+      "oAP" : "\/.npmignore",
       "oF" : 0
     },
     "\/package.json" : {
