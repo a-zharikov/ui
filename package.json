@@ -1,8 +1,8 @@
 {
   "name": "zharikov-ui",
-  "version": "1.0.4",
+  "version": "1.1.2",
   "description": "",
-  "main": "zui.scss",
+  "main": "styles.scss",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/a-zharikov/ui"

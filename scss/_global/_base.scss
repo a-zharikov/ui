@@ -7,13 +7,5 @@ html {
     height: $zui-100p;
     overflow-x: hidden;
     @include text($normal-x5);
-
-    div {
-      @include transition-delay(500,250);
-      
-      p {
-        @include text_count(3, 1.5, false);
-      }
-    }
   }
 }
