@@ -3,7 +3,7 @@
   .control {
     cursor: pointer;
     margin-bottom: $zui-20;
-    @include text($subline-x5);
+    @include text($subline-x4);
     @include flex($rw,$fs,$cr,$zui-8);
 
     input {
