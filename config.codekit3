@@ -157,6 +157,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/_elements\/_snackbar.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/_elements\/_snackbar.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/_elements\/_textarea.scss" : {
       "aP" : 0,
       "bl" : 0,

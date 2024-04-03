@@ -39,6 +39,10 @@ $sizes: (
             padding: $zui-4;
           }
 
+          &.check {
+            display: none;
+          }
+
           &::after {
             opacity: 0;
             @include transition;
@@ -170,7 +174,6 @@ $sizes: (
     height: $zui-100p;
     position: absolute;
     opacity: 0;
-    pointer-events: none;
 
     &:checked {
       & + .chips-control {
