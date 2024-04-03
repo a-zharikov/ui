@@ -10,13 +10,21 @@
 @import 'scss/_mixins/element';
 @import 'scss/_mixins/flex';
 @import 'scss/_mixins/fonts';
+@import 'scss/_mixins/form';
 @import 'scss/_mixins/grid';
 @import 'scss/_mixins/tt';
 @import 'scss/_mixins/typography';
+@import 'scss/_mixins/icons';
 
 @import 'scss/_animations/rotation';
 
 @import 'scss/_global/reset';
 @import 'scss/_global/base';
 
+@import 'scss/_elements/input';
+@import 'scss/_elements/textarea';
+@import 'scss/_elements/checkbox';
+@import 'scss/_elements/radio';
+@import 'scss/_elements/toggle';
 @import 'scss/_elements/button';
+@import 'scss/_elements/form';

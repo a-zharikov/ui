@@ -1,0 +1,19 @@
+@mixin icon($size, $color: null) {
+  color: if($color != null, $color, $border);
+  font: #{$size}px/#{$size}px $icon;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+.icon {
+  font-family: $icon;
+  font-weight: normal;
+  font-style: normal;
+  font-size: $zui-20;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}

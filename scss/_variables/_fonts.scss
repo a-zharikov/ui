@@ -1,4 +1,5 @@
 $ff: 'Montserrat', sans-serif;
+$icon: 'Material Symbols Rounded';
 
 // Font weight
 $th: 100;  // Thin
@@ -27,11 +28,11 @@ $subline-x6: $re #{$zui-24}/#{$zui-32} $ff;
 $subline-x5: $re #{$zui-20}/#{$zui-28} $ff;
 
 $normal-x5: $re #{$zui-20}/#{$zui-28} $ff;
-$bold-x5: $bo #{$zui-20}/#{$zui-28} $ff;
+$bold-x5: $sb #{$zui-20}/#{$zui-28} $ff;
 $normal-x4: $re #{$zui-16}/#{$zui-24} $ff;
-$bold-x4: $bo #{$zui-16}/#{$zui-24} $ff;
+$bold-x4: $sb #{$zui-16}/#{$zui-24} $ff;
 $normal-x3: $re #{$zui-12}/#{$zui-16} $ff;
-$bold-x3: $bo #{$zui-12}/#{$zui-16} $ff;
+$bold-x3: $sb #{$zui-12}/#{$zui-16} $ff;
 
 $large: $sb #{$zui-24}/#{$zui-24} $ff;
 $middle: $sb #{$zui-20}/#{$zui-20} $ff;

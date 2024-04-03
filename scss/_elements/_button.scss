@@ -217,4 +217,12 @@ $pressed: (
       }
     }
   }
+
+  &.mini {
+    @include mq(mobile) {
+      span {
+        display: none;
+      }
+    }
+  }
 }

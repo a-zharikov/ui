@@ -39,7 +39,7 @@
   font-family: "Material Symbols Rounded";
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;
+  font-size: 20px;
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -256,6 +256,291 @@ html body {
   overflow-x: hidden;
   color: #202327;
   font: 400 20px/28px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+
+input {
+  background: #FFFFFF;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+input[type=text], input[type=password], input[type=email], input[type=search], input[type=tel], input[type=url] {
+  border: 2px solid #B7BABE;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  color: #202327;
+  font: 400 16px/24px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=url]:focus {
+  border-color: #3C4EFA;
+  box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.5), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
+}
+input[type=text]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown), input[type=password]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown), input[type=email]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown), input[type=search]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown), input[type=tel]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown), input[type=url]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown) {
+  border-color: #39414E;
+  box-shadow: none;
+}
+input[type=file] {
+  width: 100%;
+  border: 2px solid #B7BABE;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 4px;
+  color: #202327;
+  font: 400 16px/24px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+input[type=file]::file-selector-button {
+  font: 500 16px/16px "Montserrat", sans-serif;
+  padding: 8px 12px;
+  background-color: #3C4EFA;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-sizing: border-box;
+  gap: 8px;
+  border-radius: 0.5em;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  flex: 0 0 auto;
+  border: 0;
+  z-index: 2;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+input[type=file]::file-selector-button:hover {
+  background-color: #5565FF;
+}
+
+textarea {
+  background: #FFFFFF;
+  border: 2px solid #B7BABE;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  resize: vertical;
+  position: relative;
+  z-index: 1;
+  color: #202327;
+  font: 400 16px/24px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+textarea:focus {
+  border-color: #3C4EFA;
+  box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.5), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
+}
+textarea:not(textarea:placeholder-shown) {
+  border-color: #39414E;
+  box-shadow: none;
+}
+
+.checkbox .control {
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+}
+.checkbox .control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.checkbox .control input:checked ~ .control-indicator {
+  border-color: #3C4EFA;
+}
+.checkbox .control input:checked ~ .control-indicator:after {
+  opacity: 1;
+  color: #3C4EFA;
+}
+.checkbox .control input:disabled ~ .control-indicator {
+  background: transparent;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.checkbox .control input:disabled ~ .control-indicator:after {
+  content: "";
+}
+.checkbox .control-wrapper {
+  margin-top: calc(-4px/2);
+}
+.checkbox .control-wrapper__title {
+  color: #202327;
+  font: 400 20px/28px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.checkbox .control-wrapper__text {
+  color: #788394;
+  font: 400 12px/16px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.checkbox .control-indicator {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  margin-right: 12px;
+  border: 2px solid #B7BABE;
+  box-sizing: border-box;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.checkbox .control-indicator:after {
+  content: "done";
+  color: #B7BABE;
+  opacity: 0;
+  color: #B7BABE;
+  font: 20px/20px "Material Symbols Rounded";
+  font-variant-numeric: lining-nums proportional-nums;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.radio .control {
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #202327;
+  font: 400 20px/28px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+}
+.radio .control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.radio .control input:checked ~ .control-indicator {
+  border-color: #3C4EFA;
+}
+.radio .control input:checked ~ .control-indicator:after {
+  background: #3C4EFA;
+  opacity: 1;
+}
+.radio .control input:disabled ~ .control-indicator {
+  background: transparent;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.radio .control input:disabled ~ .control-indicator:after {
+  background: transparent;
+}
+.radio .control-wrapper {
+  margin-top: calc(-4px/2);
+}
+.radio .control-wrapper__title {
+  color: #202327;
+  font: 400 20px/28px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.radio .control-wrapper__text {
+  color: #788394;
+  font: 400 12px/16px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.radio .control-indicator {
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  position: relative;
+  margin-right: 12px;
+  border: 2px solid #B7BABE;
+  box-sizing: border-box;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.radio .control-indicator:after {
+  content: "";
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  background: #B7BABE;
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.toggle .control {
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #202327;
+  font: 400 20px/28px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.toggle .control input[type=checkbox] {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: #788394;
+  outline: none;
+  border-radius: 20px;
+  appearance: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.toggle .control input[type=checkbox]:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  top: 4px;
+  left: 4px;
+  background: #fff;
+  transition: 0.2s;
+}
+.toggle .control input[type=checkbox]:checked {
+  background: #3C4EFA;
+}
+.toggle .control input[type=checkbox]:checked:before {
+  left: calc(100% - 20px);
+}
+.toggle .control input:disabled {
+  opacity: 0.2;
 }
 
 .button {
@@ -741,4 +1026,188 @@ html body {
   .button.icn span {
     display: none;
   }
+}
+@media only screen and (max-width: 649px) {
+  .button.mini span {
+    display: none;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 8px;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 4px;
+}
+.form-row label {
+  color: #202327;
+  font: 600 16px/24px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 4px;
+  position: relative;
+}
+.form-input .icon {
+  color: #788394;
+}
+.form-input .icon + input {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.form-input .icon + input + label {
+  left: 32px;
+}
+.form-input .icon.__left {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
+  left: 8px;
+}
+.form-input .icon.__right {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0, -50%);
+  right: 12px;
+}
+.form-input .icon.__hover {
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.form-input label {
+  color: #788394;
+  font: 400 16px/24px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
+  left: 16px;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.form-input input[type=text], .form-input input[type=password], .form-input input[type=email], .form-input input[type=number], .form-input input[type=search], .form-input input[type=tel], .form-input input[type=url], .form-input input[type=date], .form-input input[type=datetime-local], .form-input input[type=time], .form-input input[type=month], .form-input input[type=week] {
+  padding-top: 12px;
+  padding-bottom: 4px;
+}
+.form-input input[type=text]::-webkit-input-placeholder, .form-input input[type=password]::-webkit-input-placeholder, .form-input input[type=email]::-webkit-input-placeholder, .form-input input[type=number]::-webkit-input-placeholder, .form-input input[type=search]::-webkit-input-placeholder, .form-input input[type=tel]::-webkit-input-placeholder, .form-input input[type=url]::-webkit-input-placeholder, .form-input input[type=date]::-webkit-input-placeholder, .form-input input[type=datetime-local]::-webkit-input-placeholder, .form-input input[type=time]::-webkit-input-placeholder, .form-input input[type=month]::-webkit-input-placeholder, .form-input input[type=week]::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #FFFFFF;
+}
+.form-input input[type=text]:-moz-placeholder, .form-input input[type=password]:-moz-placeholder, .form-input input[type=email]:-moz-placeholder, .form-input input[type=number]:-moz-placeholder, .form-input input[type=search]:-moz-placeholder, .form-input input[type=tel]:-moz-placeholder, .form-input input[type=url]:-moz-placeholder, .form-input input[type=date]:-moz-placeholder, .form-input input[type=datetime-local]:-moz-placeholder, .form-input input[type=time]:-moz-placeholder, .form-input input[type=month]:-moz-placeholder, .form-input input[type=week]:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #FFFFFF;
+  opacity: 1;
+}
+.form-input input[type=text]::-moz-placeholder, .form-input input[type=password]::-moz-placeholder, .form-input input[type=email]::-moz-placeholder, .form-input input[type=number]::-moz-placeholder, .form-input input[type=search]::-moz-placeholder, .form-input input[type=tel]::-moz-placeholder, .form-input input[type=url]::-moz-placeholder, .form-input input[type=date]::-moz-placeholder, .form-input input[type=datetime-local]::-moz-placeholder, .form-input input[type=time]::-moz-placeholder, .form-input input[type=month]::-moz-placeholder, .form-input input[type=week]::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #FFFFFF;
+  opacity: 1;
+}
+.form-input input[type=text]:-ms-input-placeholder, .form-input input[type=password]:-ms-input-placeholder, .form-input input[type=email]:-ms-input-placeholder, .form-input input[type=number]:-ms-input-placeholder, .form-input input[type=search]:-ms-input-placeholder, .form-input input[type=tel]:-ms-input-placeholder, .form-input input[type=url]:-ms-input-placeholder, .form-input input[type=date]:-ms-input-placeholder, .form-input input[type=datetime-local]:-ms-input-placeholder, .form-input input[type=time]:-ms-input-placeholder, .form-input input[type=month]:-ms-input-placeholder, .form-input input[type=week]:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #FFFFFF;
+}
+.form-input input[type=text]::-ms-input-placeholder, .form-input input[type=password]::-ms-input-placeholder, .form-input input[type=email]::-ms-input-placeholder, .form-input input[type=number]::-ms-input-placeholder, .form-input input[type=search]::-ms-input-placeholder, .form-input input[type=tel]::-ms-input-placeholder, .form-input input[type=url]::-ms-input-placeholder, .form-input input[type=date]::-ms-input-placeholder, .form-input input[type=datetime-local]::-ms-input-placeholder, .form-input input[type=time]::-ms-input-placeholder, .form-input input[type=month]::-ms-input-placeholder, .form-input input[type=week]::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #FFFFFF;
+}
+.form-input input[type=text]::placeholder, .form-input input[type=password]::placeholder, .form-input input[type=email]::placeholder, .form-input input[type=number]::placeholder, .form-input input[type=search]::placeholder, .form-input input[type=tel]::placeholder, .form-input input[type=url]::placeholder, .form-input input[type=date]::placeholder, .form-input input[type=datetime-local]::placeholder, .form-input input[type=time]::placeholder, .form-input input[type=month]::placeholder, .form-input input[type=week]::placeholder {
+  /* Most modern browsers support this now. */
+  color: #FFFFFF;
+}
+.form-input input[type=text]:focus + label, .form-input input[type=text]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=password]:focus + label, .form-input input[type=password]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=email]:focus + label, .form-input input[type=email]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=number]:focus + label, .form-input input[type=number]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=search]:focus + label, .form-input input[type=search]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=tel]:focus + label, .form-input input[type=tel]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=url]:focus + label, .form-input input[type=url]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=date]:focus + label, .form-input input[type=date]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=datetime-local]:focus + label, .form-input input[type=datetime-local]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=time]:focus + label, .form-input input[type=time]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=month]:focus + label, .form-input input[type=month]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=week]:focus + label, .form-input input[type=week]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label {
+  top: 2px;
+  transform: translate(0, 0);
+  color: #39414E;
+  font: 400 12px/16px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.form-input input[type=text]:focus + label + .__hover, .form-input input[type=password]:focus + label + .__hover, .form-input input[type=email]:focus + label + .__hover, .form-input input[type=number]:focus + label + .__hover, .form-input input[type=search]:focus + label + .__hover, .form-input input[type=tel]:focus + label + .__hover, .form-input input[type=url]:focus + label + .__hover, .form-input input[type=date]:focus + label + .__hover, .form-input input[type=datetime-local]:focus + label + .__hover, .form-input input[type=time]:focus + label + .__hover, .form-input input[type=month]:focus + label + .__hover, .form-input input[type=week]:focus + label + .__hover {
+  opacity: 1;
+}
+.form-number {
+  background: #FFFFFF;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-radius: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.form-number input[type=number] {
+  width: 100%;
+  border: 0;
+  padding: 8px 0;
+  box-sizing: border-box;
+  background: transparent;
+  text-align: center;
+  color: #788394;
+  font: 600 20px/28px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+.form-number input[type=number]::-webkit-outer-spin-button, .form-number input[type=number]::-webkit-inner-spin-button {
+  display: none;
+}
+.form-number__button {
+  width: 32px;
+  height: 32px;
+  border-radius: 80px;
+  background: #EAEAEA;
+  overflow: hidden;
+  flex: 0 0 auto;
+  color: #B7BABE;
+  font: 20px/20px "Material Symbols Rounded";
+  font-variant-numeric: lining-nums proportional-nums;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.form-number__button:hover {
+  color: #FFFFFF;
+  background: #3C4EFA;
+}
+.form .error input {
+  border-color: #E85656;
+  box-shadow: none;
+}
+.form .error label .error-text {
+  display: inline-block;
+}
+.form .error-text {
+  display: none;
+  color: #E85656;
+  font: 400 12px/16px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.form .error > .error-text, .form .error + .error-text {
+  display: block;
 }
