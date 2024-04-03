@@ -895,6 +895,50 @@ textarea:not(textarea:placeholder-shown) {
   color: #788394;
 }
 
+.label {
+  width: auto;
+  border-radius: 4px;
+  background: #B7BABE;
+  padding: 0 4px;
+  box-sizing: border-box;
+  color: #39414E;
+  font: 600 12px/16px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+}
+.label.primary {
+  background-color: #3C4EFA;
+  color: #FFFFFF;
+}
+.label.success {
+  background-color: #52B530;
+  color: #FFFFFF;
+}
+.label.waring {
+  background-color: #F9AA34;
+  color: #202327;
+}
+.label.danger {
+  background-color: #E85656;
+  color: #FFFFFF;
+}
+.label.caption {
+  background-color: #788394;
+  color: #FFFFFF;
+}
+.label.body {
+  background-color: #39414E;
+  color: #FFFFFF;
+}
+.label.tertiary {
+  background-color: #202327;
+  color: #FFFFFF;
+}
+
 .button {
   width: auto;
   cursor: pointer;

@@ -1,0 +1,27 @@
+$colors: (
+  primary: (background-color: $primary, color: $white),
+  success: (background-color: $success, color: $white),
+  waring: (background-color: $waring, color: $headline),
+  danger: (background-color: $danger, color: $white),
+  caption: (background-color: $caption, color: $white),
+  body: (background-color: $body, color: $white),
+  tertiary: (background-color: $headline, color: $white),
+);
+
+.label {
+  width: auto;
+  border-radius: $zui-4;
+  background: $border;
+  padding: 0 $zui-4;
+  box-sizing: border-box;
+  @include text($bold-x3,$body);
+  @include flex($rw,$fs,$cr,0,$di);
+
+  @each $color-name, $color-map in $colors {
+    &.#{$color-name} {
+      border-color: map-get($color-map, border);
+      background-color: map-get($color-map, background-color);
+      color: map-get($color-map, color);
+    }
+  }
+}
