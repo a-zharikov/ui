@@ -1,0 +1,190 @@
+$sizes: (
+  large: (font: $normal-x4, padding: $zui-8 $zui-12, gap: $zui-8, font-size: $zui-24, margin-top: 1px),
+  middle: (font: $normal-x4, padding: $zui-4 $zui-12, gap: $zui-4, font-size: $zui-20, margin-top: 0),
+  small: (font: $normal-x3, padding: $zui-4 $zui-8, gap: $zui-4,font-size: $zui-16, margin-top: 1px)
+);
+
+.chips {
+  color: $body;
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+
+  // Размеры чипсов (.large .middle .small)
+  @each $size-name, $size-map in $sizes {
+    &.#{$size-name} {
+      font: map-get($size-map, font);
+      line-height: $zui-100p;
+      
+      .chips-control {
+        gap: map-get($size-map, gap);
+        padding: map-get($size-map, padding);
+
+        span {
+          white-space: nowrap;
+          margin-top: map-get($size-map, margin-top);
+        }
+
+        .icon {
+          color: $caption;
+          font-size: map-get($size-map, font-size);
+          box-sizing: border-box;
+          position: relative;
+          @include transition;
+          @include flex($rw,$cr,$cr,0);
+
+          &.close {
+            color: $primary;
+            border-radius: $zui-8;
+            padding: $zui-4;
+          }
+
+          &::after {
+            opacity: 0;
+            @include transition;
+          }
+        }
+      }
+    }
+  }
+
+  &-control {
+    cursor: pointer;
+    border-radius: $zui-16;
+    border: 2px solid $border;
+    background: $white;
+    box-sizing: border-box;
+    @include flex($di,$rw,$cr,$cr,0);
+    @include transition;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background: $object;
+      border-color: $caption;
+    }
+
+    &:active {
+      border-color: $primary;
+    }
+  }
+
+  &:focus {
+    .chips-control {
+      border-color: $primary;
+      box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.50), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.50);
+    }
+  }
+
+  // Модификаторы
+  &.large {
+    @include mq(mobile) {
+      font: $normal-x4;
+      
+      .chips-control {
+        padding: $zui-4 $zui-12;
+      }
+
+      i {
+        font-size: $zui-20;
+      }
+    }
+  }
+
+  &.__input {
+    .chips-control {
+      &:hover {
+        background: $white;
+
+        .close {
+          background: $border;
+        }
+      }
+    }
+
+    &:focus {
+      .chips-control {
+        border-color: $border;
+        box-shadow: none;
+
+        .close {
+          background: $white;
+          border: inset 2px solid $primary;
+          box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.50), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.50);
+
+          &::after {
+            content: '';
+            width: $zui-100p;
+            height: $zui-100p;
+            border-radius: $zui-8;
+            border: 1px solid $primary;
+            position: absolute;
+            box-sizing: border-box;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            @include transition;
+          }
+        }
+      }
+    }
+  }
+
+  &.loader {
+    flex-direction: row-reverse;
+    pointer-events: none;
+
+    i {
+      
+      &:first-child {
+        &::before {
+          content: 'autorenew';
+          color: $primary;
+          width: 1em;
+          height: 1em;
+          display: block;
+          font-family: $icon;
+          animation: rotation 2s infinite linear;
+        }
+      }
+    }
+  }
+
+  &.mobile {
+    @include mq(mobile) {
+      .chips-control {
+        width: $zui-100p;
+      }
+    }
+  }
+
+  &.disable {
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  input {
+    width: $zui-100p;
+    height: $zui-100p;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked {
+      & + .chips-control {
+        border-color: $primary;
+        background: $object;
+
+        i {
+          color: $primary !important;
+
+          &.check {
+            display: block !important;
+          }
+        }
+      }
+    }
+  }
+}
