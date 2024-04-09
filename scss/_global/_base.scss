@@ -9,3 +9,8 @@ html {
     @include text($normal-x5);
   }
 }
+
+.container {
+  max-width: $grid;
+  margin: 0 auto;
+}

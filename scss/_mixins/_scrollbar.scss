@@ -1,0 +1,27 @@
+$scrollbarBg: $white;
+$scrollbarThumb: $pages;
+$scrollbarWidth: $zui-4;
+$scrollbarBorder: 1px solid $scrollbarBg;
+$scrollbarBorderRadius: $zui-8;
+
+@mixin scrollbar {
+  scrollbar-width: $scrollbarWidth;
+  scrollbar-height: $scrollbarWidth;
+  scrollbar-color: $scrollbarThumb $scrollbarBg;
+  
+  &::-webkit-scrollbar {
+    width: $scrollbarWidth;
+    height: $scrollbarWidth;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scrollbarBg;
+    border-radius: $scrollbarBorderRadius;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollbarThumb;
+    border-radius: $scrollbarBorderRadius;
+    border: $scrollbarBorder;
+  }
+}

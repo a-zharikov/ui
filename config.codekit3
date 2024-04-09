@@ -217,6 +217,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/_elements\/_typography.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/_elements\/_typography.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/_global\/_base.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -362,6 +377,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/scss\/_mixins\/_icons.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/_mixins\/_scrollbar.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/_mixins\/_scrollbar.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
