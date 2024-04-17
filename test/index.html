@@ -16,7 +16,7 @@
 </head>
 <body>
   <div class="div">
-    <h1>Прототип нового сервиса — это как песнь светлого будущего</h1>
+    <!-- <h1>Прототип нового сервиса — это как песнь светлого будущего</h1>
     <p>Учитывая <a href="#">ключевые сценарии</a> поведения, внедрение современных методик в значительной степени обусловливает важность позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса направлений прогрессивного развития. С учётом сложившейся международной обстановки, современная методология разработки влечет за собой процесс внедрения и модернизации поэтапного и последовательного развития общества.</p>
     <p>Учитывая ключевые сценарии поведения, внедрение современных методик в значительной степени обусловливает важность позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса направлений прогрессивного развития. С учётом сложившейся международной обстановки, современная методология разработки влечет за собой процесс внедрения и модернизации поэтапного и последовательного развития общества.</p>
     <h2>Прототип нового сервиса — это как песнь светлого будущего</h2>
@@ -73,7 +73,7 @@
           <td>Колнка 3</td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
     <div class="label primary">label</div>
     <br>
     <br>
@@ -153,24 +153,30 @@
       </div>
       <div class="form-row">
         <label for="">Ваше имя</label>
-        <input type="search" placeholder="Имя">
+        <input class="input" type="search" placeholder="Имя">
         <div class="error-text">Сообщение об ошибки</div>
       </div>
-      <div class="form-input">
-        <i class="icon __left">search</i>
-        <input type="text" placeholder="Имя" required>
-        <label for="">
-          Ваше имя
-          <div class="error-text">Сообщение об ошибки</div>
-        </label>
-        <i class="icon __right __hover">close</i>
+      <div class="form-row">
+        <div class="input-placeholder">
+          <i class="icon __left">search</i>
+          <input class="input" type="text" placeholder="Имя" required>
+          <label for="">
+            Ваше имя
+          </label>
+          <i class="icon __right __hover">close</i>
+        </div>
+        <div class="error-text">Сообщение об ошибки</div>
       </div>
-      <div class="form-number">
-        <button class="form-number__button" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">remove</button>
-        <input type="number" value="0">
-        <button class="form-number__button" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">add</button>
+      <div class="form-row">
+        <div class="input-number">
+          <button class="input-number__button" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">remove</button>
+          <input type="number" value="0">
+          <button class="input-number__button" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">add</button>
+        </div>
       </div>
-      <input type="file">
+      <div class="form-row">
+        <input class="input-file" type="file">
+      </div>
       <div class="form-row">
         <label for="">Сообщение</label>
         <textarea placeholder="Текс сообщения"></textarea>

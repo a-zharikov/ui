@@ -415,7 +415,7 @@ pre {
   color: #202327;
   font: 400 16px/24px "Montserrat", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
-  padding: 4px 8px;
+  padding: 16px;
   border-radius: 4px;
   background: #EAEAEA;
   overflow-x: scroll;
@@ -435,6 +435,12 @@ pre::-webkit-scrollbar-thumb {
   background-color: #EAEAEA;
   border-radius: 8px;
   border: 1px solid #FFFFFF;
+}
+pre:not(pre:last-child) {
+  margin-bottom: 20px;
+}
+pre code {
+  padding: 0;
 }
 
 table {
@@ -459,15 +465,8 @@ table tr:last-child td {
   border: 0;
 }
 
-input {
+.input {
   background: #FFFFFF;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-}
-input[type=text], input[type=password], input[type=email], input[type=search], input[type=tel], input[type=url] {
   border: 2px solid #B7BABE;
   border-radius: 12px;
   box-sizing: border-box;
@@ -475,26 +474,32 @@ input[type=text], input[type=password], input[type=email], input[type=search], i
   color: #202327;
   font: 400 16px/24px "Montserrat", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=url]:focus {
+.input:focus {
   border-color: #3C4EFA;
   box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.5), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
 }
-input[type=text]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown), input[type=password]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown), input[type=email]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown), input[type=search]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown), input[type=tel]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown), input[type=url]:not(input[type=text]:placeholder-shown, input[type=password]:placeholder-shown, input[type=email]:placeholder-shown, input[type=search]:placeholder-shown, input[type=tel]:placeholder-shown, input[type=url]:placeholder-shown) {
+.input:not(.input:placeholder-shown) {
   border-color: #39414E;
   box-shadow: none;
 }
-input[type=file] {
+.input-file {
   width: 100%;
   border: 2px solid #B7BABE;
   border-radius: 12px;
   box-sizing: border-box;
   padding: 4px;
+  background: #FFFFFF;
   color: #202327;
   font: 400 16px/24px "Montserrat", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
-input[type=file]::file-selector-button {
+.input-file::file-selector-button {
   font: 500 16px/16px "Montserrat", sans-serif;
   padding: 8px 12px;
   background-color: #3C4EFA;
@@ -515,8 +520,155 @@ input[type=file]::file-selector-button {
   -ms-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
-input[type=file]::file-selector-button:hover {
+.input-file::file-selector-button:hover {
   background-color: #5565FF;
+}
+.input-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 4px;
+  position: relative;
+}
+.input-placeholder .icon {
+  color: #788394;
+}
+.input-placeholder .icon + input {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.input-placeholder .icon + input + label {
+  left: 32px;
+  pointer-events: none;
+  color: #788394;
+  font: 400 16px/24px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.input-placeholder .icon.__left {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
+  left: 8px;
+}
+.input-placeholder .icon.__right {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0, -50%);
+  right: 12px;
+}
+.input-placeholder .icon.__hover {
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.input-placeholder label {
+  color: #788394;
+  font: 400 16px/24px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
+  left: 16px;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.input-placeholder input[type=text], .input-placeholder input[type=password], .input-placeholder input[type=email], .input-placeholder input[type=number], .input-placeholder input[type=search], .input-placeholder input[type=tel], .input-placeholder input[type=url], .input-placeholder input[type=date], .input-placeholder input[type=datetime-local], .input-placeholder input[type=time], .input-placeholder input[type=month], .input-placeholder input[type=week] {
+  padding-top: 12px;
+  padding-bottom: 4px;
+}
+.input-placeholder input[type=text]::-webkit-input-placeholder, .input-placeholder input[type=password]::-webkit-input-placeholder, .input-placeholder input[type=email]::-webkit-input-placeholder, .input-placeholder input[type=number]::-webkit-input-placeholder, .input-placeholder input[type=search]::-webkit-input-placeholder, .input-placeholder input[type=tel]::-webkit-input-placeholder, .input-placeholder input[type=url]::-webkit-input-placeholder, .input-placeholder input[type=date]::-webkit-input-placeholder, .input-placeholder input[type=datetime-local]::-webkit-input-placeholder, .input-placeholder input[type=time]::-webkit-input-placeholder, .input-placeholder input[type=month]::-webkit-input-placeholder, .input-placeholder input[type=week]::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #FFFFFF;
+}
+.input-placeholder input[type=text]:-moz-placeholder, .input-placeholder input[type=password]:-moz-placeholder, .input-placeholder input[type=email]:-moz-placeholder, .input-placeholder input[type=number]:-moz-placeholder, .input-placeholder input[type=search]:-moz-placeholder, .input-placeholder input[type=tel]:-moz-placeholder, .input-placeholder input[type=url]:-moz-placeholder, .input-placeholder input[type=date]:-moz-placeholder, .input-placeholder input[type=datetime-local]:-moz-placeholder, .input-placeholder input[type=time]:-moz-placeholder, .input-placeholder input[type=month]:-moz-placeholder, .input-placeholder input[type=week]:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #FFFFFF;
+  opacity: 1;
+}
+.input-placeholder input[type=text]::-moz-placeholder, .input-placeholder input[type=password]::-moz-placeholder, .input-placeholder input[type=email]::-moz-placeholder, .input-placeholder input[type=number]::-moz-placeholder, .input-placeholder input[type=search]::-moz-placeholder, .input-placeholder input[type=tel]::-moz-placeholder, .input-placeholder input[type=url]::-moz-placeholder, .input-placeholder input[type=date]::-moz-placeholder, .input-placeholder input[type=datetime-local]::-moz-placeholder, .input-placeholder input[type=time]::-moz-placeholder, .input-placeholder input[type=month]::-moz-placeholder, .input-placeholder input[type=week]::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #FFFFFF;
+  opacity: 1;
+}
+.input-placeholder input[type=text]:-ms-input-placeholder, .input-placeholder input[type=password]:-ms-input-placeholder, .input-placeholder input[type=email]:-ms-input-placeholder, .input-placeholder input[type=number]:-ms-input-placeholder, .input-placeholder input[type=search]:-ms-input-placeholder, .input-placeholder input[type=tel]:-ms-input-placeholder, .input-placeholder input[type=url]:-ms-input-placeholder, .input-placeholder input[type=date]:-ms-input-placeholder, .input-placeholder input[type=datetime-local]:-ms-input-placeholder, .input-placeholder input[type=time]:-ms-input-placeholder, .input-placeholder input[type=month]:-ms-input-placeholder, .input-placeholder input[type=week]:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #FFFFFF;
+}
+.input-placeholder input[type=text]::-ms-input-placeholder, .input-placeholder input[type=password]::-ms-input-placeholder, .input-placeholder input[type=email]::-ms-input-placeholder, .input-placeholder input[type=number]::-ms-input-placeholder, .input-placeholder input[type=search]::-ms-input-placeholder, .input-placeholder input[type=tel]::-ms-input-placeholder, .input-placeholder input[type=url]::-ms-input-placeholder, .input-placeholder input[type=date]::-ms-input-placeholder, .input-placeholder input[type=datetime-local]::-ms-input-placeholder, .input-placeholder input[type=time]::-ms-input-placeholder, .input-placeholder input[type=month]::-ms-input-placeholder, .input-placeholder input[type=week]::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #FFFFFF;
+}
+.input-placeholder input[type=text]::placeholder, .input-placeholder input[type=password]::placeholder, .input-placeholder input[type=email]::placeholder, .input-placeholder input[type=number]::placeholder, .input-placeholder input[type=search]::placeholder, .input-placeholder input[type=tel]::placeholder, .input-placeholder input[type=url]::placeholder, .input-placeholder input[type=date]::placeholder, .input-placeholder input[type=datetime-local]::placeholder, .input-placeholder input[type=time]::placeholder, .input-placeholder input[type=month]::placeholder, .input-placeholder input[type=week]::placeholder {
+  /* Most modern browsers support this now. */
+  color: #FFFFFF;
+}
+.input-placeholder input[type=text]:focus + label, .input-placeholder input[type=text]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=password]:focus + label, .input-placeholder input[type=password]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=email]:focus + label, .input-placeholder input[type=email]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=number]:focus + label, .input-placeholder input[type=number]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=search]:focus + label, .input-placeholder input[type=search]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=tel]:focus + label, .input-placeholder input[type=tel]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=url]:focus + label, .input-placeholder input[type=url]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=date]:focus + label, .input-placeholder input[type=date]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=datetime-local]:focus + label, .input-placeholder input[type=datetime-local]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=time]:focus + label, .input-placeholder input[type=time]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=month]:focus + label, .input-placeholder input[type=month]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=week]:focus + label, .input-placeholder input[type=week]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label {
+  top: 2px;
+  transform: translate(0, 0);
+  color: #39414E;
+  font: 400 12px/16px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.input-placeholder input[type=text]:focus + label + .__hover, .input-placeholder input[type=password]:focus + label + .__hover, .input-placeholder input[type=email]:focus + label + .__hover, .input-placeholder input[type=number]:focus + label + .__hover, .input-placeholder input[type=search]:focus + label + .__hover, .input-placeholder input[type=tel]:focus + label + .__hover, .input-placeholder input[type=url]:focus + label + .__hover, .input-placeholder input[type=date]:focus + label + .__hover, .input-placeholder input[type=datetime-local]:focus + label + .__hover, .input-placeholder input[type=time]:focus + label + .__hover, .input-placeholder input[type=month]:focus + label + .__hover, .input-placeholder input[type=week]:focus + label + .__hover {
+  opacity: 1;
+}
+.input-number {
+  background: #FFFFFF;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-radius: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.input-number input[type=number] {
+  width: 100%;
+  border: 0;
+  padding: 8px 0;
+  box-sizing: border-box;
+  background: transparent;
+  text-align: center;
+  color: #788394;
+  font: 600 20px/28px "Montserrat", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+.input-number input[type=number]::-webkit-outer-spin-button, .input-number input[type=number]::-webkit-inner-spin-button {
+  display: none;
+}
+.input-number__button {
+  width: 32px;
+  height: 32px;
+  border-radius: 80px;
+  background: #EAEAEA;
+  overflow: hidden;
+  flex: 0 0 auto;
+  color: #B7BABE;
+  font: 20px/20px "Material Symbols Rounded";
+  font-variant-numeric: lining-nums proportional-nums;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.input-number__button:hover {
+  color: #FFFFFF;
+  background: #3C4EFA;
 }
 
 textarea {
@@ -1647,149 +1799,6 @@ textarea:not(textarea:placeholder-shown) {
   color: #202327;
   font: 600 16px/24px "Montserrat", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
-}
-.form-input {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  gap: 4px;
-  position: relative;
-}
-.form-input .icon {
-  color: #788394;
-}
-.form-input .icon + input {
-  padding-left: 32px;
-  padding-right: 32px;
-}
-.form-input .icon + input + label {
-  left: 32px;
-}
-.form-input .icon.__left {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(0, -50%);
-  left: 8px;
-}
-.form-input .icon.__right {
-  position: absolute;
-  top: 50%;
-  right: 0%;
-  transform: translate(0, -50%);
-  right: 12px;
-}
-.form-input .icon.__hover {
-  opacity: 0;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-}
-.form-input label {
-  color: #788394;
-  font: 400 16px/24px "Montserrat", sans-serif;
-  font-variant-numeric: lining-nums proportional-nums;
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(0, -50%);
-  left: 16px;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-}
-.form-input input[type=text], .form-input input[type=password], .form-input input[type=email], .form-input input[type=number], .form-input input[type=search], .form-input input[type=tel], .form-input input[type=url], .form-input input[type=date], .form-input input[type=datetime-local], .form-input input[type=time], .form-input input[type=month], .form-input input[type=week] {
-  padding-top: 12px;
-  padding-bottom: 4px;
-}
-.form-input input[type=text]::-webkit-input-placeholder, .form-input input[type=password]::-webkit-input-placeholder, .form-input input[type=email]::-webkit-input-placeholder, .form-input input[type=number]::-webkit-input-placeholder, .form-input input[type=search]::-webkit-input-placeholder, .form-input input[type=tel]::-webkit-input-placeholder, .form-input input[type=url]::-webkit-input-placeholder, .form-input input[type=date]::-webkit-input-placeholder, .form-input input[type=datetime-local]::-webkit-input-placeholder, .form-input input[type=time]::-webkit-input-placeholder, .form-input input[type=month]::-webkit-input-placeholder, .form-input input[type=week]::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #FFFFFF;
-}
-.form-input input[type=text]:-moz-placeholder, .form-input input[type=password]:-moz-placeholder, .form-input input[type=email]:-moz-placeholder, .form-input input[type=number]:-moz-placeholder, .form-input input[type=search]:-moz-placeholder, .form-input input[type=tel]:-moz-placeholder, .form-input input[type=url]:-moz-placeholder, .form-input input[type=date]:-moz-placeholder, .form-input input[type=datetime-local]:-moz-placeholder, .form-input input[type=time]:-moz-placeholder, .form-input input[type=month]:-moz-placeholder, .form-input input[type=week]:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #FFFFFF;
-  opacity: 1;
-}
-.form-input input[type=text]::-moz-placeholder, .form-input input[type=password]::-moz-placeholder, .form-input input[type=email]::-moz-placeholder, .form-input input[type=number]::-moz-placeholder, .form-input input[type=search]::-moz-placeholder, .form-input input[type=tel]::-moz-placeholder, .form-input input[type=url]::-moz-placeholder, .form-input input[type=date]::-moz-placeholder, .form-input input[type=datetime-local]::-moz-placeholder, .form-input input[type=time]::-moz-placeholder, .form-input input[type=month]::-moz-placeholder, .form-input input[type=week]::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #FFFFFF;
-  opacity: 1;
-}
-.form-input input[type=text]:-ms-input-placeholder, .form-input input[type=password]:-ms-input-placeholder, .form-input input[type=email]:-ms-input-placeholder, .form-input input[type=number]:-ms-input-placeholder, .form-input input[type=search]:-ms-input-placeholder, .form-input input[type=tel]:-ms-input-placeholder, .form-input input[type=url]:-ms-input-placeholder, .form-input input[type=date]:-ms-input-placeholder, .form-input input[type=datetime-local]:-ms-input-placeholder, .form-input input[type=time]:-ms-input-placeholder, .form-input input[type=month]:-ms-input-placeholder, .form-input input[type=week]:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #FFFFFF;
-}
-.form-input input[type=text]::-ms-input-placeholder, .form-input input[type=password]::-ms-input-placeholder, .form-input input[type=email]::-ms-input-placeholder, .form-input input[type=number]::-ms-input-placeholder, .form-input input[type=search]::-ms-input-placeholder, .form-input input[type=tel]::-ms-input-placeholder, .form-input input[type=url]::-ms-input-placeholder, .form-input input[type=date]::-ms-input-placeholder, .form-input input[type=datetime-local]::-ms-input-placeholder, .form-input input[type=time]::-ms-input-placeholder, .form-input input[type=month]::-ms-input-placeholder, .form-input input[type=week]::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #FFFFFF;
-}
-.form-input input[type=text]::placeholder, .form-input input[type=password]::placeholder, .form-input input[type=email]::placeholder, .form-input input[type=number]::placeholder, .form-input input[type=search]::placeholder, .form-input input[type=tel]::placeholder, .form-input input[type=url]::placeholder, .form-input input[type=date]::placeholder, .form-input input[type=datetime-local]::placeholder, .form-input input[type=time]::placeholder, .form-input input[type=month]::placeholder, .form-input input[type=week]::placeholder {
-  /* Most modern browsers support this now. */
-  color: #FFFFFF;
-}
-.form-input input[type=text]:focus + label, .form-input input[type=text]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=password]:focus + label, .form-input input[type=password]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=email]:focus + label, .form-input input[type=email]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=number]:focus + label, .form-input input[type=number]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=search]:focus + label, .form-input input[type=search]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=tel]:focus + label, .form-input input[type=tel]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=url]:focus + label, .form-input input[type=url]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=date]:focus + label, .form-input input[type=date]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=datetime-local]:focus + label, .form-input input[type=datetime-local]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=time]:focus + label, .form-input input[type=time]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=month]:focus + label, .form-input input[type=month]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label, .form-input input[type=week]:focus + label, .form-input input[type=week]:not(.form-input input[type=text]:placeholder-shown, .form-input input[type=password]:placeholder-shown, .form-input input[type=email]:placeholder-shown, .form-input input[type=number]:placeholder-shown, .form-input input[type=search]:placeholder-shown, .form-input input[type=tel]:placeholder-shown, .form-input input[type=url]:placeholder-shown, .form-input input[type=date]:placeholder-shown, .form-input input[type=datetime-local]:placeholder-shown, .form-input input[type=time]:placeholder-shown, .form-input input[type=month]:placeholder-shown, .form-input input[type=week]:placeholder-shown) + label {
-  top: 2px;
-  transform: translate(0, 0);
-  color: #39414E;
-  font: 400 12px/16px "Montserrat", sans-serif;
-  font-variant-numeric: lining-nums proportional-nums;
-}
-.form-input input[type=text]:focus + label + .__hover, .form-input input[type=password]:focus + label + .__hover, .form-input input[type=email]:focus + label + .__hover, .form-input input[type=number]:focus + label + .__hover, .form-input input[type=search]:focus + label + .__hover, .form-input input[type=tel]:focus + label + .__hover, .form-input input[type=url]:focus + label + .__hover, .form-input input[type=date]:focus + label + .__hover, .form-input input[type=datetime-local]:focus + label + .__hover, .form-input input[type=time]:focus + label + .__hover, .form-input input[type=month]:focus + label + .__hover, .form-input input[type=week]:focus + label + .__hover {
-  opacity: 1;
-}
-.form-number {
-  background: #FFFFFF;
-  padding: 0 8px;
-  box-sizing: border-box;
-  border-radius: 80px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
-.form-number input[type=number] {
-  width: 100%;
-  border: 0;
-  padding: 8px 0;
-  box-sizing: border-box;
-  background: transparent;
-  text-align: center;
-  color: #788394;
-  font: 600 20px/28px "Montserrat", sans-serif;
-  font-variant-numeric: lining-nums proportional-nums;
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  appearance: textfield;
-}
-.form-number input[type=number]::-webkit-outer-spin-button, .form-number input[type=number]::-webkit-inner-spin-button {
-  display: none;
-}
-.form-number__button {
-  width: 32px;
-  height: 32px;
-  border-radius: 80px;
-  background: #EAEAEA;
-  overflow: hidden;
-  flex: 0 0 auto;
-  color: #B7BABE;
-  font: 20px/20px "Material Symbols Rounded";
-  font-variant-numeric: lining-nums proportional-nums;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-}
-.form-number__button:hover {
-  color: #FFFFFF;
-  background: #3C4EFA;
 }
 .form .error input {
   border-color: #E85656;

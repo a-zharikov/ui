@@ -25,3 +25,10 @@ $scrollbarBorderRadius: $zui-8;
     border: $scrollbarBorder;
   }
 }
+
+@mixin nosb {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

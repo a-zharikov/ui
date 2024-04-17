@@ -142,11 +142,19 @@ code {
 
 pre {
   @include text($normal-x4);
-  padding: $zui-4 $zui-8;
+  padding: $zui-16;
   border-radius: $zui-4;
   background: $pages;
   overflow-x: scroll;
   @include scrollbar;
+
+  &:not(&:last-child) {
+    margin-bottom: $zui-20;
+  }
+
+  code {
+    padding: 0;
+  }
 }
 
 table {

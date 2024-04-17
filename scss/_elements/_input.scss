@@ -1,31 +1,29 @@
-input {
+.input {
   background: $white;
+  border: 2px solid $border;
+  border-radius: $zui-12;
+  box-sizing: border-box;
+  padding: $zui-8 $zui-16;
+  @include text($normal-x4);
   @include transition;
 
-  &[type="text"], &[type="password"], &[type="email"], &[type="search"], &[type="tel"], &[type="url"] {
-    border: 2px solid $border;
-    border-radius: $zui-12;
-    box-sizing: border-box;
-    padding: $zui-8 $zui-16;
-    @include text($normal-x4);
-
-    &:focus {
-      border-color: $primary;
-      box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.50), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.50);
-    }
-  
-    &:not(&:placeholder-shown) {
-      border-color: $body;
-      box-shadow: none;
-    }
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.50), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.50);
   }
 
-  &[type="file"] {
+  &:not(&:placeholder-shown) {
+    border-color: $body;
+    box-shadow: none;
+  }
+
+  &-file {
     width: $zui-100p;
     border: 2px solid $border;
     border-radius: $zui-12;
     box-sizing: border-box;
     padding: $zui-4;
+    background: $white;
     @include text($normal-x4);
 
     &::file-selector-button {
@@ -47,6 +45,121 @@ input {
 
       &:hover {
         background-color: $primary-hover;
+      }
+    }
+  }
+
+  &-placeholder {
+    @include flex($cl,$fs,$sh,$zui-4);
+    position: relative;
+
+    .icon {
+      color: $caption;
+
+      & + input {
+        padding-left: $zui-32;
+        padding-right: $zui-32;
+
+        & + label {
+          left: $zui-32;
+          pointer-events: none;
+          @include text($normal-x4,$caption);
+        }
+      }
+
+      &.__left {
+        @include left_center;
+        left: $zui-8;
+      }
+
+      &.__right {
+        @include right_center;
+        right: $zui-12;
+      }
+
+      &.__hover {
+        opacity: 0;
+        @include transition;
+      }
+    }
+
+    label {
+      @include text($normal-x4,$caption);
+      @include left_center;
+      left: $zui-16;
+      @include transition;
+    }
+
+    input {
+      
+      &[type="text"], &[type="password"], &[type="email"], &[type="number"], &[type="search"], &[type="tel"], &[type="url"], &[type="date"], &[type="datetime-local"], &[type="time"], &[type="month"], &[type="week"] {
+        padding-top: $zui-12;
+        padding-bottom: $zui-4;
+        @include placeholder($white);
+
+        &:focus, &:not(&:placeholder-shown) {
+          
+          & + label {
+            top: calc($zui-4 / 2);
+            transform: translate(0,0);
+            @include text($normal-x3,$body);
+          }
+        }
+
+        &:focus {
+          
+          & + label {
+            
+            & + .__hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-number {
+    background: $white;
+    padding: 0 $zui-8;
+    box-sizing: border-box;
+    border-radius: $zui-80;
+    @include flex($rw,$sb,$cr,$zui-16);
+
+    input {
+      &[type="number"] {
+        width: $zui-100p;
+        border: 0;
+        padding: $zui-8 0;
+        box-sizing: border-box;
+        background: $tr;
+        text-align: center;
+        @include text($bold-x5,$caption);
+
+        -moz-appearance: textfield;
+        -webkit-appearance: textfield;
+        appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          display: none;
+        }
+      }
+    }
+
+    &__button {
+      width: $zui-32;
+      height: $zui-32;
+      border-radius: $zui-80;
+      background: $pages;
+      overflow: hidden;
+      flex: 0 0 auto;
+      @include icon(20,$border);
+      @include transition;
+
+      &:hover {
+        color: $white;
+        background: $primary;
       }
     }
   }
