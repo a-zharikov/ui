@@ -671,7 +671,7 @@ table tr:last-child td {
   background: #3C4EFA;
 }
 
-textarea {
+.textarea {
   background: #FFFFFF;
   border: 2px solid #B7BABE;
   border-radius: 12px;
@@ -689,11 +689,11 @@ textarea {
   -ms-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
-textarea:focus {
+.textarea:focus {
   border-color: #3C4EFA;
   box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.5), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
 }
-textarea:not(textarea:placeholder-shown) {
+.textarea:not(.textarea:placeholder-shown) {
   border-color: #39414E;
   box-shadow: none;
 }
