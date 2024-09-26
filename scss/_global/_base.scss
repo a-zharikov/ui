@@ -13,4 +13,7 @@ html {
 .container {
   max-width: $grid;
   margin: 0 auto;
+  padding: 0 $zui-12;
+  box-sizing: border-box;
+  position: relative;
 }

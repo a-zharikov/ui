@@ -59,7 +59,7 @@ $pressed: (
   flex: 0 0 auto;
   border: 0;
   z-index: 2;
-  @include flex($rw,$cr,$cr,0,$di);
+  @include flex($rw,$cr,$cr,$zui-8,$di);
 
   .icon {
     margin-top: -2px;

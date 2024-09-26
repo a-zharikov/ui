@@ -40,7 +40,6 @@
   font-family: "Material Symbols Rounded";
   font-weight: normal;
   font-style: normal;
-  font-size: 20px;
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -263,6 +262,9 @@ html body {
 .container {
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 12px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 h1 {
@@ -1307,7 +1309,7 @@ table tr:last-child td {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0;
+  gap: 8px;
 }
 .button .icon {
   margin-top: -2px;

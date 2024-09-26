@@ -68,12 +68,12 @@
       }
 
       &.__left {
-        @include left_center;
+        @include center-l;
         left: $zui-8;
       }
 
       &.__right {
-        @include right_center;
+        @include center-tr;
         right: $zui-12;
       }
 
@@ -85,7 +85,7 @@
 
     label {
       @include text($normal-x4,$caption);
-      @include left_center;
+      @include center-l;
       left: $zui-16;
       @include transition;
     }
