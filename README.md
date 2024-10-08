@@ -12,6 +12,6 @@
 
 ## История изменений
 ### 1.0 <sup>18.04.2024</sup>
-Первая версия фреймворка
+- Первая версия фреймворка
 
 Полная история [CHANGELOG.md](https://github.com/a-zharikov/ui/blob/main/CHANGELOG.md) 

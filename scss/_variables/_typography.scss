@@ -1,0 +1,30 @@
+// Font weight
+$light: 300; // Light
+$regular: 400; // Regular
+$semibold: 600; // SemiBold
+$bold: 700; // Bold
+
+$title-x16: $bold #{$zui-64}/#{$zui-64} $ff;
+$title-x14: $bold #{$zui-56}/#{$zui-56} $ff;
+$title-x12: $bold #{$zui-48}/#{$zui-48} $ff;
+
+$headline-x10: $bold #{$zui-40}/#{$zui-44} $ff;
+$headline-x8: $bold #{$zui-32}/#{$zui-40} $ff;
+$headline-x6: $bold #{$zui-24}/#{$zui-32} $ff;
+$headline-x4: $bold #{$zui-20}/#{$zui-28} $ff;
+
+$subline-x10: $regular #{$zui-40}/#{$zui-40} $ff;
+$subline-x8: $regular #{$zui-32}/#{$zui-40} $ff;
+$subline-x6: $regular #{$zui-24}/#{$zui-32} $ff;
+$subline-x4: $regular #{$zui-20}/#{$zui-28} $ff;
+
+$normal-x5: #{$zui-20}/#{$zui-28} $ff;
+$bold-x5: $semibold #{$zui-20}/#{$zui-28} $ff;
+$normal-x4: $regular #{$zui-16}/#{$zui-24} $ff;
+$bold-x4: $semibold #{$zui-16}/#{$zui-24} $ff;
+$normal-x3: $regular #{$zui-12}/#{$zui-16} $ff;
+$bold-x3: $semibold #{$zui-12}/#{$zui-16} $ff;
+
+$large: $semibold #{$zui-24}/#{$zui-24} $ff;
+$middle: $semibold #{$zui-20}/#{$zui-20} $ff;
+$small: $semibold #{$zui-16}/#{$zui-16} $ff;

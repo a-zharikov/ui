@@ -44,6 +44,134 @@
       "rFN" : 0,
       "uCM" : 0
     },
+    "\/fonts\/raleway\/Raleway-Bold.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-Bold.woff",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-Bold.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-Bold.woff2",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-BoldItalic.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-BoldItalic.woff",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-BoldItalic.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-BoldItalic.woff2",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-Italic.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-Italic.woff",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-Italic.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-Italic.woff2",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-Light.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-Light.woff",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-Light.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-Light.woff2",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-LightItalic.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-LightItalic.woff",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-LightItalic.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-LightItalic.woff2",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-Regular.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-Regular.woff",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-Regular.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-Regular.woff2",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-SemiBold.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-SemiBold.woff",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-SemiBold.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-SemiBold.woff2",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-SemiBoldItalic.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-SemiBoldItalic.woff",
+      "oF" : 0
+    },
+    "\/fonts\/raleway\/Raleway-SemiBoldItalic.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/fonts\/raleway\/Raleway-SemiBoldItalic.woff2",
+      "oF" : 0
+    },
     "\/package.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -341,21 +469,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/_mixins\/_fonts.scss" : {
-      "aP" : 0,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/scss\/_mixins\/_fonts.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 0,
-      "sct" : 0
-    },
     "\/scss\/_mixins\/_form.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -491,6 +604,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/_variables\/_typography.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/scss\/_variables\/_typography.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/styles.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -505,6 +633,150 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
+    },
+    "\/test\/fonts\/icon\/MaterialSymbolsRounded.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/icon\/MaterialSymbolsRounded.ttf",
+      "oF" : 0
+    },
+    "\/test\/fonts\/icon\/MaterialSymbolsRounded.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/icon\/MaterialSymbolsRounded.woff2",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-Bold.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-Bold.woff",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-Bold.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-Bold.woff2",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-BoldItalic.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-BoldItalic.woff",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-BoldItalic.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-BoldItalic.woff2",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-Italic.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-Italic.woff",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-Italic.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-Italic.woff2",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-Light.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-Light.woff",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-Light.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-Light.woff2",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-LightItalic.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-LightItalic.woff",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-LightItalic.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-LightItalic.woff2",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-Regular.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-Regular.woff",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-Regular.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-Regular.woff2",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-SemiBold.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-SemiBold.woff",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-SemiBold.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-SemiBold.woff2",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-SemiBoldItalic.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-SemiBoldItalic.woff",
+      "oF" : 0
+    },
+    "\/test\/fonts\/raleway\/Raleway-SemiBoldItalic.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/test\/fonts\/raleway\/Raleway-SemiBoldItalic.woff2",
+      "oF" : 0
     },
     "\/test\/index.html" : {
       "cB" : 0,

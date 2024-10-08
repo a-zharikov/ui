@@ -1,6 +1,67 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded");
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/raleway/Raleway-Bold.woff) format("woff"), url(fonts/raleway/Raleway-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/raleway/Raleway-BoldItalic.woff) format("woff"), url(fonts/raleway/Raleway-BoldItalic.woff2) format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/raleway/Raleway-SemiBold.woff) format("woff"), url(fonts/raleway/Raleway-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/raleway/Raleway-SemiBoldItalic.woff) format("woff"), url(fonts/raleway/Raleway-SemiBoldItalic.woff2) format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/raleway/Raleway-Regular.woff) format("woff"), url(fonts/raleway/Raleway-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/raleway/Raleway-Italic.woff) format("woff"), url(fonts/raleway/Raleway-Italic.woff2) format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/raleway/Raleway-Light.woff) format("woff"), url(fonts/raleway/Raleway-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/raleway/Raleway-LightItalic.woff) format("woff"), url(fonts/raleway/Raleway-LightItalic.woff2) format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Material Symboldls Rounded";
+  src: url(fonts/icon/MaterialSymbolsRounded.woff) format("woff"), url(fonts/icon/MaterialSymbolsRounded.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 .__mqDebag {
   z-index: 100;
   position: relative;
@@ -37,7 +98,7 @@
 }
 
 .icon {
-  font-family: "Material Symbols Rounded";
+  font-family: "Material Symboldls Rounded";
   font-weight: normal;
   font-style: normal;
   display: inline-block;
@@ -255,7 +316,7 @@ html body {
   height: 100%;
   overflow-x: hidden;
   color: #202327;
-  font: 400 20px/28px "Montserrat", sans-serif;
+  font: 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
@@ -270,48 +331,48 @@ html body {
 h1 {
   margin-bottom: 20px;
   color: #202327;
-  font: 700 40px/44px "Montserrat", sans-serif;
+  font: 700 40px/44px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 h2 {
   margin-bottom: 20px;
   color: #202327;
-  font: 700 32px/40px "Montserrat", sans-serif;
+  font: 700 32px/40px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 h3 {
   margin-bottom: 20px;
   color: #202327;
-  font: 700 24px/32px "Montserrat", sans-serif;
+  font: 700 24px/32px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 h4 {
   margin-bottom: 20px;
   color: #202327;
-  font: 700 20px/28px "Montserrat", sans-serif;
+  font: 700 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 h5 {
   margin-bottom: 20px;
   color: #202327;
-  font: 700 20px/28px "Montserrat", sans-serif;
+  font: 700 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 h6 {
   margin-bottom: 20px;
   color: #202327;
-  font: 700 20px/28px "Montserrat", sans-serif;
+  font: 700 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 p {
   color: #202327;
-  font: 400 20px/28px "Montserrat", sans-serif;
+  font: 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 p:not(p:last-child) {
@@ -336,7 +397,7 @@ ul:not(ul:last-child, ol:last-child), ol:not(ul:last-child, ol:last-child) {
 }
 ul li, ol li {
   color: #202327;
-  font: 400 20px/28px "Montserrat", sans-serif;
+  font: 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   display: flex;
   flex-direction: row;
@@ -374,7 +435,7 @@ blockquote {
   box-sizing: border-box;
   background: #EAEAEA;
   color: #202327;
-  font: 400 20px/28px "Montserrat", sans-serif;
+  font: 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   font-style: italic;
   position: relative;
@@ -387,7 +448,7 @@ blockquote:not(blockquote:last-child) {
 }
 blockquote::before, blockquote::after {
   color: #788394;
-  font: 700 64px/64px "Montserrat", sans-serif;
+  font: 700 64px/64px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: "Times New Roman", Times, serif;
   position: absolute;
@@ -406,7 +467,7 @@ blockquote::after {
 
 code {
   color: #788394;
-  font: 400 16px/24px "Montserrat", sans-serif;
+  font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   padding: 4px 8px;
   border-radius: 4px;
@@ -415,7 +476,7 @@ code {
 
 pre {
   color: #202327;
-  font: 400 16px/24px "Montserrat", sans-serif;
+  font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   padding: 16px;
   border-radius: 4px;
@@ -453,14 +514,14 @@ table th {
   border-bottom: 2px solid #3C4EFA;
   padding: 4px;
   color: #202327;
-  font: 400 20px/28px "Montserrat", sans-serif;
+  font: 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 table td {
   border-bottom: 1px solid #B7BABE;
   padding: 4px;
   color: #202327;
-  font: 400 20px/28px "Montserrat", sans-serif;
+  font: 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 table tr:last-child td {
@@ -474,7 +535,7 @@ table tr:last-child td {
   box-sizing: border-box;
   padding: 8px 16px;
   color: #202327;
-  font: 400 16px/24px "Montserrat", sans-serif;
+  font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
@@ -498,11 +559,11 @@ table tr:last-child td {
   padding: 4px;
   background: #FFFFFF;
   color: #202327;
-  font: 400 16px/24px "Montserrat", sans-serif;
+  font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .input-file::file-selector-button {
-  font: 500 16px/16px "Montserrat", sans-serif;
+  font: 600 16px/16px "Raleway", sans-serif;
   padding: 8px 12px;
   background-color: #3C4EFA;
   color: #FFFFFF;
@@ -544,7 +605,7 @@ table tr:last-child td {
   left: 32px;
   pointer-events: none;
   color: #788394;
-  font: 400 16px/24px "Montserrat", sans-serif;
+  font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .input-placeholder .icon.__left {
@@ -571,7 +632,7 @@ table tr:last-child td {
 }
 .input-placeholder label {
   color: #788394;
-  font: 400 16px/24px "Montserrat", sans-serif;
+  font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   position: absolute;
   top: 50%;
@@ -618,7 +679,7 @@ table tr:last-child td {
   top: 2px;
   transform: translate(0, 0);
   color: #39414E;
-  font: 400 12px/16px "Montserrat", sans-serif;
+  font: 400 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .input-placeholder input[type=text]:focus + label + .__hover, .input-placeholder input[type=password]:focus + label + .__hover, .input-placeholder input[type=email]:focus + label + .__hover, .input-placeholder input[type=number]:focus + label + .__hover, .input-placeholder input[type=search]:focus + label + .__hover, .input-placeholder input[type=tel]:focus + label + .__hover, .input-placeholder input[type=url]:focus + label + .__hover, .input-placeholder input[type=date]:focus + label + .__hover, .input-placeholder input[type=datetime-local]:focus + label + .__hover, .input-placeholder input[type=time]:focus + label + .__hover, .input-placeholder input[type=month]:focus + label + .__hover, .input-placeholder input[type=week]:focus + label + .__hover {
@@ -643,7 +704,7 @@ table tr:last-child td {
   background: transparent;
   text-align: center;
   color: #788394;
-  font: 600 20px/28px "Montserrat", sans-serif;
+  font: 600 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
@@ -660,7 +721,7 @@ table tr:last-child td {
   overflow: hidden;
   flex: 0 0 auto;
   color: #B7BABE;
-  font: 20px/20px "Material Symbols Rounded";
+  font: 20px/20px "Material Symboldls Rounded";
   font-variant-numeric: lining-nums proportional-nums;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
@@ -683,7 +744,7 @@ table tr:last-child td {
   position: relative;
   z-index: 1;
   color: #202327;
-  font: 400 16px/24px "Montserrat", sans-serif;
+  font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
@@ -734,12 +795,12 @@ table tr:last-child td {
 }
 .checkbox .control-wrapper__title {
   color: #202327;
-  font: 400 20px/28px "Montserrat", sans-serif;
+  font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .checkbox .control-wrapper__text {
   color: #788394;
-  font: 400 12px/16px "Montserrat", sans-serif;
+  font: 400 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .checkbox .control-indicator {
@@ -765,7 +826,7 @@ table tr:last-child td {
   color: #B7BABE;
   opacity: 0;
   color: #B7BABE;
-  font: 20px/20px "Material Symbols Rounded";
+  font: 20px/20px "Material Symboldls Rounded";
   font-variant-numeric: lining-nums proportional-nums;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
@@ -778,7 +839,7 @@ table tr:last-child td {
   cursor: pointer;
   margin-bottom: 20px;
   color: #202327;
-  font: 400 20px/28px "Montserrat", sans-serif;
+  font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   display: flex;
   flex-direction: row;
@@ -811,12 +872,12 @@ table tr:last-child td {
 }
 .radio .control-wrapper__title {
   color: #202327;
-  font: 400 20px/28px "Montserrat", sans-serif;
+  font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .radio .control-wrapper__text {
   color: #788394;
-  font: 400 12px/16px "Montserrat", sans-serif;
+  font: 400 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .radio .control-indicator {
@@ -857,7 +918,7 @@ table tr:last-child td {
   cursor: pointer;
   margin-bottom: 20px;
   color: #202327;
-  font: 400 20px/28px "Montserrat", sans-serif;
+  font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   display: flex;
   flex-direction: row;
@@ -904,7 +965,7 @@ table tr:last-child td {
   outline: none;
 }
 .chips.large {
-  font: 400 16px/24px "Montserrat", sans-serif;
+  font: 400 16px/24px "Raleway", sans-serif;
   line-height: 100%;
 }
 .chips.large .chips-control {
@@ -948,7 +1009,7 @@ table tr:last-child td {
   transition: all 500ms ease-in-out;
 }
 .chips.middle {
-  font: 400 16px/24px "Montserrat", sans-serif;
+  font: 400 16px/24px "Raleway", sans-serif;
   line-height: 100%;
 }
 .chips.middle .chips-control {
@@ -992,7 +1053,7 @@ table tr:last-child td {
   transition: all 500ms ease-in-out;
 }
 .chips.small {
-  font: 400 12px/16px "Montserrat", sans-serif;
+  font: 400 12px/16px "Raleway", sans-serif;
   line-height: 100%;
 }
 .chips.small .chips-control {
@@ -1068,7 +1129,7 @@ table tr:last-child td {
 }
 @media only screen and (max-width: 649px) {
   .chips.large {
-    font: 400 16px/24px "Montserrat", sans-serif;
+    font: 400 16px/24px "Raleway", sans-serif;
   }
   .chips.large .chips-control {
     padding: 4px 12px;
@@ -1119,7 +1180,7 @@ table tr:last-child td {
   width: 1em;
   height: 1em;
   display: block;
-  font-family: "Material Symbols Rounded";
+  font-family: "Material Symboldls Rounded";
   animation: rotation 2s infinite linear;
 }
 @media only screen and (max-width: 649px) {
@@ -1156,7 +1217,7 @@ table tr:last-child td {
   border: 2px solid #FFFFFF;
   box-sizing: border-box;
   color: #39414E;
-  font: 500 16px/16px "Montserrat", sans-serif;
+  font: 600 16px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   display: inline-flex;
   flex-direction: row;
@@ -1256,7 +1317,7 @@ table tr:last-child td {
   padding: 0 4px;
   box-sizing: border-box;
   color: #39414E;
-  font: 600 12px/16px "Montserrat", sans-serif;
+  font: 600 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   display: inline-flex;
   flex-direction: row;
@@ -1329,7 +1390,7 @@ table tr:last-child td {
   border-top-right-radius: 100%;
 }
 .button.large {
-  font: 600 24px/24px "Montserrat", sans-serif;
+  font: 600 24px/24px "Raleway", sans-serif;
   padding: 16px 24px;
 }
 .button.large.primary {
@@ -1438,7 +1499,7 @@ table tr:last-child td {
   background-color: #E12828;
 }
 .button.middle {
-  font: 600 20px/20px "Montserrat", sans-serif;
+  font: 600 20px/20px "Raleway", sans-serif;
   padding: 12px 16px;
 }
 .button.middle.primary {
@@ -1547,7 +1608,7 @@ table tr:last-child td {
   background-color: #E12828;
 }
 .button.small {
-  font: 500 16px/16px "Montserrat", sans-serif;
+  font: 600 16px/16px "Raleway", sans-serif;
   padding: 8px 12px;
 }
 .button.small.primary {
@@ -1799,7 +1860,7 @@ table tr:last-child td {
 }
 .form-row label {
   color: #202327;
-  font: 600 16px/24px "Montserrat", sans-serif;
+  font: 600 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .form .error input {
@@ -1812,7 +1873,7 @@ table tr:last-child td {
 .form .error-text {
   display: none;
   color: #E85656;
-  font: 400 12px/16px "Montserrat", sans-serif;
+  font: 400 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .form .error > .error-text, .form .error + .error-text {
