@@ -1,6 +1,7 @@
-@mixin icon($size, $color: null) {
+@mixin icon($size, $color: null, $weight: null) {
   color: if($color != null, $color, $border);
-  font: #{$size}px/#{$size}px $icon;
+  font: #{$size}/#{$size} $icon;
+  font-weight: if($weight != null, $weight, $regular);
   font-variant-numeric: lining-nums proportional-nums;
 }
 

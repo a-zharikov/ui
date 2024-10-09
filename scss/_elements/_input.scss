@@ -154,7 +154,7 @@
       background: $pages;
       overflow: hidden;
       flex: 0 0 auto;
-      @include icon(20,$border);
+      @include icon($zui-20,$border);
       @include transition;
 
       &:hover {

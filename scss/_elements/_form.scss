@@ -1,34 +1,28 @@
 .form {
   @include flex($cl,$fs,$sh,$zui-8);
 
-  &-row {
+  &__row {
     @include flex($cl,$fs,$sh,$zui-4);
 
     label {
       @include text($bold-x4);
     }
-  }
 
-  .error {
-
-    input {
-      border-color: $danger;
-      box-shadow: none;
-    }
-
-    label {
-      .error-text {
-        display: inline-block;
-      }
-    }
-
-    &-text {
+    .error-text {
       display: none;
       @include text($normal-x3,$danger);
     }
 
-    & > .error-text, & + .error-text {
-      display: block;
+    &--error {
+
+      input, textarea {
+        border-color: $danger;
+        box-shadow: none;
+      }
+  
+      .error-text {
+        display: block;
+      }
     }
   }
 }

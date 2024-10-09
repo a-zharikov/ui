@@ -16,7 +16,7 @@ $sizes: (
       font: map-get($size-map, font);
       line-height: $zui-100p;
       
-      .chips-control {
+      .chips__control {
         gap: map-get($size-map, gap);
         padding: map-get($size-map, padding);
 
@@ -49,10 +49,17 @@ $sizes: (
           }
         }
       }
+
+      input {
+        width: $zui-100p;
+        height: $zui-100p;
+        position: absolute;
+        opacity: 0;
+      }
     }
   }
 
-  &-control {
+  &__control {
     cursor: pointer;
     border-radius: $zui-16;
     border: 2px solid $border;
@@ -87,7 +94,7 @@ $sizes: (
     @include mq(mobile) {
       font: $normal-x4;
       
-      .chips-control {
+      .chips__control {
         padding: $zui-4 $zui-12;
       }
 
@@ -98,7 +105,7 @@ $sizes: (
   }
 
   &.__input {
-    .chips-control {
+    .chips__control {
       &:hover {
         background: $white;
 
@@ -109,7 +116,7 @@ $sizes: (
     }
 
     &:focus {
-      .chips-control {
+      .chips__control {
         border-color: $border;
         box-shadow: none;
 
@@ -158,7 +165,7 @@ $sizes: (
 
   &.mobile {
     @include mq(mobile) {
-      .chips-control {
+      .chips__control {
         width: $zui-100p;
       }
     }
@@ -169,23 +176,16 @@ $sizes: (
     pointer-events: none;
   }
 
-  input {
-    width: $zui-100p;
-    height: $zui-100p;
-    position: absolute;
-    opacity: 0;
+  &:has(:checked) {
+    .chips__control {
+      border-color: $primary;
+      background: $object;
 
-    &:checked {
-      & + .chips-control {
-        border-color: $primary;
-        background: $object;
+      i {
+        color: $primary !important;
 
-        i {
-          color: $primary !important;
-
-          &.check {
-            display: block !important;
-          }
+        &.check {
+          display: block !important;
         }
       }
     }

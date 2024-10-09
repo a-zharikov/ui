@@ -1,6 +1,6 @@
 .toggle {
   
-  .control {
+  &__control {
     cursor: pointer;
     margin-bottom: $zui-20;
     @include text($subline-x4);

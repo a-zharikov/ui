@@ -172,6 +172,9 @@
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ERIC MEYER RESET
@@ -722,6 +725,7 @@ table tr:last-child td {
   flex: 0 0 auto;
   color: #B7BABE;
   font: 20px/20px "Material Symboldls Rounded";
+  font-weight: 400;
   font-variant-numeric: lining-nums proportional-nums;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
@@ -761,7 +765,7 @@ table tr:last-child td {
   box-shadow: none;
 }
 
-.checkbox .control {
+.checkbox__control {
   cursor: pointer;
   margin-bottom: 20px;
   display: flex;
@@ -770,40 +774,26 @@ table tr:last-child td {
   align-items: flex-start;
   gap: 0;
 }
-.checkbox .control input {
+.checkbox__control input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
-.checkbox .control input:checked ~ .control-indicator {
+.checkbox__control:has(:checked) .checkbox__indicator {
   border-color: #3C4EFA;
 }
-.checkbox .control input:checked ~ .control-indicator:after {
+.checkbox__control:has(:checked) .checkbox__indicator:after {
   opacity: 1;
-  color: #3C4EFA;
 }
-.checkbox .control input:disabled ~ .control-indicator {
+.checkbox__control:has(:disabled) .checkbox__indicator {
   background: transparent;
   opacity: 0.4;
   pointer-events: none;
 }
-.checkbox .control input:disabled ~ .control-indicator:after {
+.checkbox__control:has(:disabled) .checkbox__indicator:after {
   content: "";
 }
-.checkbox .control-wrapper {
-  margin-top: calc(-4px/2);
-}
-.checkbox .control-wrapper__title {
-  color: #202327;
-  font: 400 20px/28px "Raleway", sans-serif;
-  font-variant-numeric: lining-nums proportional-nums;
-}
-.checkbox .control-wrapper__text {
-  color: #788394;
-  font: 400 12px/16px "Raleway", sans-serif;
-  font-variant-numeric: lining-nums proportional-nums;
-}
-.checkbox .control-indicator {
+.checkbox__indicator {
   width: 24px;
   height: 24px;
   border-radius: 4px;
@@ -821,12 +811,13 @@ table tr:last-child td {
   align-items: center;
   gap: 0;
 }
-.checkbox .control-indicator:after {
-  content: "done";
+.checkbox__indicator:after {
+  content: "check";
   color: #B7BABE;
   opacity: 0;
-  color: #B7BABE;
+  color: #3C4EFA;
   font: 20px/20px "Material Symboldls Rounded";
+  font-weight: 400;
   font-variant-numeric: lining-nums proportional-nums;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
@@ -834,8 +825,21 @@ table tr:last-child td {
   -ms-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
+.checkbox__wrapper {
+  margin-top: calc(-4px/2);
+}
+.checkbox__title {
+  color: #202327;
+  font: 400 20px/28px "Raleway", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.checkbox__text {
+  color: #788394;
+  font: 400 12px/16px "Raleway", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
 
-.radio .control {
+.radio__control {
   cursor: pointer;
   margin-bottom: 20px;
   color: #202327;
@@ -847,40 +851,27 @@ table tr:last-child td {
   align-items: flex-start;
   gap: 0;
 }
-.radio .control input {
+.radio__control input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
-.radio .control input:checked ~ .control-indicator {
+.radio__control:has(:checked) .radio__indicator {
   border-color: #3C4EFA;
 }
-.radio .control input:checked ~ .control-indicator:after {
+.radio__control:has(:checked) .radio__indicator:after {
   background: #3C4EFA;
   opacity: 1;
 }
-.radio .control input:disabled ~ .control-indicator {
+.radio__control:has(:disabled) .radio__indicator {
   background: transparent;
   opacity: 0.4;
   pointer-events: none;
 }
-.radio .control input:disabled ~ .control-indicator:after {
+.radio__control:has(:disabled) .radio__indicator:after {
   background: transparent;
 }
-.radio .control-wrapper {
-  margin-top: calc(-4px/2);
-}
-.radio .control-wrapper__title {
-  color: #202327;
-  font: 400 20px/28px "Raleway", sans-serif;
-  font-variant-numeric: lining-nums proportional-nums;
-}
-.radio .control-wrapper__text {
-  color: #788394;
-  font: 400 12px/16px "Raleway", sans-serif;
-  font-variant-numeric: lining-nums proportional-nums;
-}
-.radio .control-indicator {
+.radio__indicator {
   height: 24px;
   width: 24px;
   border-radius: 100%;
@@ -899,7 +890,7 @@ table tr:last-child td {
   align-items: center;
   gap: 0;
 }
-.radio .control-indicator:after {
+.radio__indicator:after {
   content: "";
   display: block;
   height: 12px;
@@ -913,8 +904,21 @@ table tr:last-child td {
   -ms-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
+.radio__wrapper {
+  margin-top: calc(-4px/2);
+}
+.radio__title {
+  color: #202327;
+  font: 400 20px/28px "Raleway", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.radio__text {
+  color: #788394;
+  font: 400 12px/16px "Raleway", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
 
-.toggle .control {
+.toggle__control {
   cursor: pointer;
   margin-bottom: 20px;
   color: #202327;
@@ -926,7 +930,7 @@ table tr:last-child td {
   align-items: center;
   gap: 8px;
 }
-.toggle .control input[type=checkbox] {
+.toggle__control input[type=checkbox] {
   position: relative;
   width: 44px;
   height: 24px;
@@ -937,7 +941,7 @@ table tr:last-child td {
   box-sizing: border-box;
   cursor: pointer;
 }
-.toggle .control input[type=checkbox]:before {
+.toggle__control input[type=checkbox]:before {
   content: "";
   position: absolute;
   width: 16px;
@@ -948,13 +952,13 @@ table tr:last-child td {
   background: #fff;
   transition: 0.2s;
 }
-.toggle .control input[type=checkbox]:checked {
+.toggle__control input[type=checkbox]:checked {
   background: #3C4EFA;
 }
-.toggle .control input[type=checkbox]:checked:before {
+.toggle__control input[type=checkbox]:checked:before {
   left: calc(100% - 20px);
 }
-.toggle .control input:disabled {
+.toggle__control input:disabled {
   opacity: 0.2;
 }
 
@@ -968,15 +972,15 @@ table tr:last-child td {
   font: 400 16px/24px "Raleway", sans-serif;
   line-height: 100%;
 }
-.chips.large .chips-control {
+.chips.large .chips__control {
   gap: 8px;
   padding: 8px 12px;
 }
-.chips.large .chips-control span {
+.chips.large .chips__control span {
   white-space: nowrap;
   margin-top: 1px;
 }
-.chips.large .chips-control .icon {
+.chips.large .chips__control .icon {
   color: #788394;
   font-size: 24px;
   box-sizing: border-box;
@@ -992,15 +996,15 @@ table tr:last-child td {
   align-items: center;
   gap: 0;
 }
-.chips.large .chips-control .icon.close {
+.chips.large .chips__control .icon.close {
   color: #3C4EFA;
   border-radius: 8px;
   padding: 4px;
 }
-.chips.large .chips-control .icon.check {
+.chips.large .chips__control .icon.check {
   display: none;
 }
-.chips.large .chips-control .icon::after {
+.chips.large .chips__control .icon::after {
   opacity: 0;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
@@ -1008,19 +1012,25 @@ table tr:last-child td {
   -ms-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
+.chips.large input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
 .chips.middle {
   font: 400 16px/24px "Raleway", sans-serif;
   line-height: 100%;
 }
-.chips.middle .chips-control {
+.chips.middle .chips__control {
   gap: 4px;
   padding: 4px 12px;
 }
-.chips.middle .chips-control span {
+.chips.middle .chips__control span {
   white-space: nowrap;
   margin-top: 0;
 }
-.chips.middle .chips-control .icon {
+.chips.middle .chips__control .icon {
   color: #788394;
   font-size: 20px;
   box-sizing: border-box;
@@ -1036,15 +1046,15 @@ table tr:last-child td {
   align-items: center;
   gap: 0;
 }
-.chips.middle .chips-control .icon.close {
+.chips.middle .chips__control .icon.close {
   color: #3C4EFA;
   border-radius: 8px;
   padding: 4px;
 }
-.chips.middle .chips-control .icon.check {
+.chips.middle .chips__control .icon.check {
   display: none;
 }
-.chips.middle .chips-control .icon::after {
+.chips.middle .chips__control .icon::after {
   opacity: 0;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
@@ -1052,19 +1062,25 @@ table tr:last-child td {
   -ms-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
+.chips.middle input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
 .chips.small {
   font: 400 12px/16px "Raleway", sans-serif;
   line-height: 100%;
 }
-.chips.small .chips-control {
+.chips.small .chips__control {
   gap: 4px;
   padding: 4px 8px;
 }
-.chips.small .chips-control span {
+.chips.small .chips__control span {
   white-space: nowrap;
   margin-top: 1px;
 }
-.chips.small .chips-control .icon {
+.chips.small .chips__control .icon {
   color: #788394;
   font-size: 16px;
   box-sizing: border-box;
@@ -1080,15 +1096,15 @@ table tr:last-child td {
   align-items: center;
   gap: 0;
 }
-.chips.small .chips-control .icon.close {
+.chips.small .chips__control .icon.close {
   color: #3C4EFA;
   border-radius: 8px;
   padding: 4px;
 }
-.chips.small .chips-control .icon.check {
+.chips.small .chips__control .icon.check {
   display: none;
 }
-.chips.small .chips-control .icon::after {
+.chips.small .chips__control .icon::after {
   opacity: 0;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
@@ -1096,7 +1112,13 @@ table tr:last-child td {
   -ms-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
-.chips-control {
+.chips.small input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
+.chips__control {
   cursor: pointer;
   border-radius: 16px;
   border: 2px solid #B7BABE;
@@ -1113,14 +1135,14 @@ table tr:last-child td {
   -ms-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
-.chips-control::before {
+.chips__control::before {
   display: none;
 }
-.chips-control:hover {
+.chips__control:hover {
   background: #EAEFFC;
   border-color: #788394;
 }
-.chips-control:active {
+.chips__control:active {
   border-color: #3C4EFA;
 }
 .chips:focus .chips-control {
@@ -1131,29 +1153,29 @@ table tr:last-child td {
   .chips.large {
     font: 400 16px/24px "Raleway", sans-serif;
   }
-  .chips.large .chips-control {
+  .chips.large .chips__control {
     padding: 4px 12px;
   }
   .chips.large i {
     font-size: 20px;
   }
 }
-.chips.__input .chips-control:hover {
+.chips.__input .chips__control:hover {
   background: #FFFFFF;
 }
-.chips.__input .chips-control:hover .close {
+.chips.__input .chips__control:hover .close {
   background: #B7BABE;
 }
-.chips.__input:focus .chips-control {
+.chips.__input:focus .chips__control {
   border-color: #B7BABE;
   box-shadow: none;
 }
-.chips.__input:focus .chips-control .close {
+.chips.__input:focus .chips__control .close {
   background: #FFFFFF;
   border: inset 2px solid #3C4EFA;
   box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.5), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
 }
-.chips.__input:focus .chips-control .close::after {
+.chips.__input:focus .chips__control .close::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -1184,7 +1206,7 @@ table tr:last-child td {
   animation: rotation 2s infinite linear;
 }
 @media only screen and (max-width: 649px) {
-  .chips.mobile .chips-control {
+  .chips.mobile .chips__control {
     width: 100%;
   }
 }
@@ -1192,20 +1214,14 @@ table tr:last-child td {
   opacity: 0.5;
   pointer-events: none;
 }
-.chips input {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-}
-.chips input:checked + .chips-control {
+.chips:has(:checked) .chips__control {
   border-color: #3C4EFA;
   background: #EAEFFC;
 }
-.chips input:checked + .chips-control i {
+.chips:has(:checked) .chips__control i {
   color: #3C4EFA !important;
 }
-.chips input:checked + .chips-control i.check {
+.chips:has(:checked) .chips__control i.check {
   display: block !important;
 }
 
@@ -1800,7 +1816,7 @@ table tr:last-child td {
   height: 1em;
   display: block;
   margin-left: 8px;
-  font-family: "Material Symbols Rounded";
+  font-family: "Material Symboldls Rounded";
   animation: rotation 2s infinite linear;
 }
 .button.disabled {
@@ -1812,7 +1828,7 @@ table tr:last-child td {
   width: 100%;
 }
 .button.fill {
-  flex: 1 0 auto;
+  flex-grow: 1;
 }
 @media only screen and (max-width: 649px) {
   .button.mobile {
@@ -1851,31 +1867,28 @@ table tr:last-child td {
   align-items: stretch;
   gap: 8px;
 }
-.form-row {
+.form__row {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
   gap: 4px;
 }
-.form-row label {
+.form__row label {
   color: #202327;
   font: 600 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
-.form .error input {
-  border-color: #E85656;
-  box-shadow: none;
-}
-.form .error label .error-text {
-  display: inline-block;
-}
-.form .error-text {
+.form__row .error-text {
   display: none;
   color: #E85656;
   font: 400 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
-.form .error > .error-text, .form .error + .error-text {
+.form__row--error input, .form__row--error textarea {
+  border-color: #E85656;
+  box-shadow: none;
+}
+.form__row--error .error-text {
   display: block;
 }

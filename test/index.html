@@ -11,12 +11,13 @@
     .div {
       max-width: 800px;
       margin: 40px auto;
+      padding: 0 12px;
     }
   </style>
 </head>
 <body>
-  <div class="div container">
-    <h1>Прототип нового сервиса — это как песнь светлого будущего</h1>
+  <div class="div">
+    <!-- <h1>Прототип нового сервиса — это как песнь светлого будущего</h1>
     <p>123456789 Учитывая <a href="#">ключевые сценарии</a> поведения, внедрение современных методик в значительной степени обусловливает важность позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса направлений прогрессивного развития. С учётом сложившейся международной обстановки, современная методология разработки влечет за собой процесс внедрения и модернизации поэтапного и последовательного развития общества.</p>
     <p>Учитывая ключевые сценарии поведения, внедрение современных методик в значительной степени обусловливает важность позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса направлений прогрессивного развития. С учётом сложившейся международной обстановки, современная методология разработки влечет за собой процесс внедрения и модернизации поэтапного и последовательного развития общества.</p>
     <h2>Прототип нового сервиса — это как песнь светлого будущего</h2>
@@ -73,7 +74,7 @@
           <td>Колнка 3</td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
     <i class="icon">search</i>
     <div class="label primary">label</div>
     <br>
@@ -86,78 +87,77 @@
     <br>
     <br>
     <label class="chips large">
-      <input type="checkbox" name="chips">
-      <div class="chips-control">
+      <div class="chips__control">
         <i class="icon check">Check</i>
         <span>Chips text</span>
         <i class="icon">close</i>
       </div>
+      <input type="checkbox" name="chips">
     </label>
     <br><br>
     <form class="form" action="/">
       <div class="radio">
-        <label class="control">
-          <input type="radio" name="radio" checked="checked">
-          <div class="control-indicator"></div>
-          <div class="control-wrapper">
-            <div class="control-wrapper__title">List label</div>
-            <div class="control-wrapper__text">List text</div>
+        <label class="radio__control">
+          <div class="radio__indicator"></div>
+          <div class="radio__wrapper">
+            <div class="radio__title">List label</div>
+            <div class="radio__text">List text</div>
           </div>
+          <input type="radio" name="radio" checked="">
         </label>
-        <label class="control">
+        <label class="radio__control">
+          <div class="radio__indicator"></div>
+          <div class="radio__wrapper">
+            <div class="radio__title">List label</div>
+          </div>
           <input type="radio" name="radio">
-          <div class="control-indicator"></div>
-          <div class="control-wrapper">
-            <div class="control-wrapper__title">List label</div>
-            <div class="control-wrapper__text">List text</div>
-          </div>
         </label>
-        <label class="control">
-          <input type="radio" name="radio" disabled="disabled">
-          <div class="control-indicator"></div>
-          <div class="control-wrapper">
-            <div class="control-wrapper__title">List label</div>
-            <div class="control-wrapper__text">List text</div>
+        <label class="radio__control">
+          <div class="radio__indicator"></div>
+          <div class="radio__wrapper">
+            <div class="radio__title">List label</div>
+            <div class="radio__text">List text</div>
           </div>
+          <input type="radio" name="radio" disabled>
         </label>
       </div>
       <div class="checkbox">
-        <label class="control">
+        <label class="checkbox__control">
+          <div class="checkbox__indicator"></div>
+          <div class="checkbox__wrapper">
+            <div class="checkbox__title">List label</div>
+            <div class="checkbox__text">List text</div>
+          </div>
           <input type="checkbox" name="checkbox" checked="">
-          <div class="control-indicator"></div>
-          <div class="control-wrapper">
-            <div class="control-wrapper__title">List label</div>
-            <div class="control-wrapper__text">List text</div>
-          </div>
         </label>
-        <label class="control">
+        <label class="checkbox__control">
+          <div class="checkbox__indicator"></div>
+          <div class="checkbox__wrapper">
+            <div class="checkbox__title">List label</div>
+          </div>
           <input type="checkbox" name="checkbox">
-          <div class="control-indicator"></div>
-          <div class="control-wrapper">
-            <div class="control-wrapper__title">List label</div>
-          </div>
         </label>
-        <label class="control">
-          <input type="checkbox" name="checkbox" disabled>
-          <div class="control-indicator"></div>
-          <div class="control-wrapper">
-            <div class="control-wrapper__title">List label</div>
-            <div class="control-wrapper__text">List text</div>
+        <label class="checkbox__control">
+          <div class="checkbox__indicator"></div>
+          <div class="checkbox__wrapper">
+            <div class="checkbox__title">List label</div>
+            <div class="checkbox__text">List text</div>
           </div>
+          <input type="checkbox" name="checkbox" disabled>
         </label>
       </div>
       <div class="toggle">
-        <label class="control">
+        <label class="toggle__control">
           <input type="checkbox" name="checkbox" checked>
           Toggle
         </label>
       </div>
-      <div class="form-row">
+      <div class="form__row form__row--error">
         <label for="">Ваше имя</label>
         <input class="input" type="search" placeholder="Имя">
         <div class="error-text">Сообщение об ошибки</div>
       </div>
-      <div class="form-row">
+      <div class="form__row">
         <div class="input-placeholder">
           <i class="icon __left">search</i>
           <input class="input" type="text" placeholder="Имя" required>
@@ -168,19 +168,19 @@
         </div>
         <div class="error-text">Сообщение об ошибки</div>
       </div>
-      <div class="form-row">
+      <div class="form__row">
         <div class="input-number">
           <button class="input-number__button" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">remove</button>
           <input type="number" value="0">
           <button class="input-number__button" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">add</button>
         </div>
       </div>
-      <div class="form-row">
+      <div class="form__row">
         <input class="input-file" type="file">
       </div>
-      <div class="form-row">
+      <div class="form__row">
         <label for="">Сообщение</label>
-        <textarea placeholder="Текс сообщения"></textarea>
+        <textarea class="textarea" placeholder="Текс сообщения"></textarea>
         <div class="error-text">Сообщение об ошибки</div>
       </div>
     </form>
