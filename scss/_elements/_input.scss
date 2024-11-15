@@ -100,7 +100,7 @@
         &:focus, &:not(&:placeholder-shown) {
           
           & + label {
-            top: calc($zui-4 / 2);
+            top: calc(#{$zui-4} / 2);
             transform: translate(0,0);
             @include text($normal-x3,$body);
           }

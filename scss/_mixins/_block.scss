@@ -1,0 +1,6 @@
+@mixin block($background: null, $padding: null, $border-radius: null, $shadow: null) {
+  background: if($background != null, $background, $white);
+  padding: if($padding != null, $padding, 0);
+  border-radius: if($border-radius != null, $border-radius, 0);
+  box-shadow: if($shadow != null, $shadow, $shadow_1);
+}

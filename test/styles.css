@@ -57,7 +57,7 @@
 }
 @font-face {
   font-family: "Material Symboldls Rounded";
-  src: url(fonts/icon/MaterialSymbolsRounded.woff) format("woff"), url(fonts/icon/MaterialSymbolsRounded.woff2) format("woff2");
+  src: url(fonts/icon/MaterialSymbolsRounded.ttf) format("ttf"), url(fonts/icon/MaterialSymbolsRounded.woff) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -382,11 +382,11 @@ p:not(p:last-child) {
   margin-bottom: 20px;
 }
 p a {
-  color: #3C4EFA;
+  color: #325FEB;
   text-decoration: none;
 }
 p a:hover {
-  color: #5565FF;
+  color: #6185F0;
 }
 p a:visited, p a:active {
   color: #2635CD;
@@ -418,7 +418,7 @@ ul li::before {
   height: 4px;
   display: block;
   margin-top: 12px;
-  background: #3C4EFA;
+  background: #325FEB;
 }
 
 ol {
@@ -428,7 +428,7 @@ ol li::before {
   content: counter(ol-counter) ".";
   counter-increment: ol-counter;
   width: 20px;
-  color: #3C4EFA;
+  color: #325FEB;
   text-align: right;
 }
 
@@ -514,7 +514,7 @@ table {
   border-collapse: collapse;
 }
 table th {
-  border-bottom: 2px solid #3C4EFA;
+  border-bottom: 2px solid #325FEB;
   padding: 4px;
   color: #202327;
   font: 20px/28px "Raleway", sans-serif;
@@ -529,6 +529,188 @@ table td {
 }
 table tr:last-child td {
   border: 0;
+}
+
+.badge {
+  height: 24px;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 700;
+  border-radius: 20px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.badge.large {
+  font-size: 16px;
+  height: 32px;
+  padding: 0 12px;
+}
+.badge.primary {
+  background-color: #E2E7F7;
+  color: #325FEB;
+}
+.badge.success {
+  background-color: #EEFAEA;
+  color: #52B530;
+}
+.badge.secondary {
+  background-color: #FEF2DF;
+  color: #F9AA34;
+}
+.badge.danger {
+  background-color: #F9E8E8;
+  color: #E85656;
+}
+.badge.caption {
+  background-color: #EFEFEF;
+  color: #788394;
+}
+.badge.middle {
+  font-size: 12px;
+  height: 24px;
+  padding: 0 8px;
+}
+.badge.primary {
+  background-color: #E2E7F7;
+  color: #325FEB;
+}
+.badge.success {
+  background-color: #EEFAEA;
+  color: #52B530;
+}
+.badge.secondary {
+  background-color: #FEF2DF;
+  color: #F9AA34;
+}
+.badge.danger {
+  background-color: #F9E8E8;
+  color: #E85656;
+}
+.badge.caption {
+  background-color: #EFEFEF;
+  color: #788394;
+}
+.badge.small {
+  font-size: 8px;
+  height: 16px;
+  padding: 0 8px;
+}
+.badge.primary {
+  background-color: #E2E7F7;
+  color: #325FEB;
+}
+.badge.success {
+  background-color: #EEFAEA;
+  color: #52B530;
+}
+.badge.secondary {
+  background-color: #FEF2DF;
+  color: #F9AA34;
+}
+.badge.danger {
+  background-color: #F9E8E8;
+  color: #E85656;
+}
+.badge.caption {
+  background-color: #EFEFEF;
+  color: #788394;
+}
+.badge.primary.pressed {
+  background-color: #325FEB;
+  color: #FFFFFF;
+}
+.badge.success.pressed {
+  background-color: #52B530;
+  color: #FFFFFF;
+}
+.badge.secondary.pressed {
+  background-color: #F9AA34;
+  color: #FFFFFF;
+}
+.badge.danger.pressed {
+  background-color: #E85656;
+  color: #FFFFFF;
+}
+.badge.caption.pressed {
+  background-color: #788394;
+  color: #FFFFFF;
+}
+.badge.primary.hover {
+  background-color: #C6D0EE;
+  color: #325FEB;
+}
+.badge.success.hover {
+  background-color: #DEF6D5;
+  color: #52B530;
+}
+.badge.secondary.hover {
+  background-color: #FDE4BF;
+  color: #F9AA34;
+}
+.badge.danger.hover {
+  background-color: #F2D1D1;
+  color: #E85656;
+}
+.badge.caption.hover {
+  background-color: #DFDFDF;
+  color: #788394;
+}
+.badge.large.circle {
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.middle.circle {
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.small.circle {
+  font-size: 8px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.large.notice {
+  font-size: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.large.notice svg {
+  display: none;
+}
+.badge.middle.notice {
+  font-size: 0;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.middle.notice svg {
+  display: none;
+}
+.badge.small.notice {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.small.notice svg {
+  display: none;
+}
+.badge--line {
+  display: inline-flex;
 }
 
 .input {
@@ -547,7 +729,7 @@ table tr:last-child td {
   transition: all 500ms ease-in-out;
 }
 .input:focus {
-  border-color: #3C4EFA;
+  border-color: #325FEB;
   box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.5), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
 }
 .input:not(.input:placeholder-shown) {
@@ -568,7 +750,7 @@ table tr:last-child td {
 .input-file::file-selector-button {
   font: 600 16px/16px "Raleway", sans-serif;
   padding: 8px 12px;
-  background-color: #3C4EFA;
+  background-color: #325FEB;
   color: #FFFFFF;
   cursor: pointer;
   box-sizing: border-box;
@@ -587,7 +769,7 @@ table tr:last-child td {
   transition: all 500ms ease-in-out;
 }
 .input-file::file-selector-button:hover {
-  background-color: #5565FF;
+  background-color: #6185F0;
 }
 .input-placeholder {
   display: flex;
@@ -679,7 +861,7 @@ table tr:last-child td {
   color: #FFFFFF;
 }
 .input-placeholder input[type=text]:focus + label, .input-placeholder input[type=text]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=password]:focus + label, .input-placeholder input[type=password]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=email]:focus + label, .input-placeholder input[type=email]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=number]:focus + label, .input-placeholder input[type=number]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=search]:focus + label, .input-placeholder input[type=search]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=tel]:focus + label, .input-placeholder input[type=tel]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=url]:focus + label, .input-placeholder input[type=url]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=date]:focus + label, .input-placeholder input[type=date]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=datetime-local]:focus + label, .input-placeholder input[type=datetime-local]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=time]:focus + label, .input-placeholder input[type=time]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=month]:focus + label, .input-placeholder input[type=month]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=week]:focus + label, .input-placeholder input[type=week]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label {
-  top: 2px;
+  top: calc(4px / 2);
   transform: translate(0, 0);
   color: #39414E;
   font: 400 12px/16px "Raleway", sans-serif;
@@ -735,10 +917,11 @@ table tr:last-child td {
 }
 .input-number__button:hover {
   color: #FFFFFF;
-  background: #3C4EFA;
+  background: #325FEB;
 }
 
 .textarea {
+  width: 100%;
   background: #FFFFFF;
   border: 2px solid #B7BABE;
   border-radius: 12px;
@@ -756,8 +939,13 @@ table tr:last-child td {
   -ms-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
+.textarea--sizing {
+  line-height: 1.5;
+  field-sizing: content;
+  min-height: 3lh;
+}
 .textarea:focus {
-  border-color: #3C4EFA;
+  border-color: #325FEB;
   box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.5), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
 }
 .textarea:not(.textarea:placeholder-shown) {
@@ -780,7 +968,7 @@ table tr:last-child td {
   opacity: 0;
 }
 .checkbox__control:has(:checked) .checkbox__indicator {
-  border-color: #3C4EFA;
+  border-color: #325FEB;
 }
 .checkbox__control:has(:checked) .checkbox__indicator:after {
   opacity: 1;
@@ -815,7 +1003,7 @@ table tr:last-child td {
   content: "check";
   color: #B7BABE;
   opacity: 0;
-  color: #3C4EFA;
+  color: #325FEB;
   font: 20px/20px "Material Symboldls Rounded";
   font-weight: 400;
   font-variant-numeric: lining-nums proportional-nums;
@@ -857,10 +1045,10 @@ table tr:last-child td {
   opacity: 0;
 }
 .radio__control:has(:checked) .radio__indicator {
-  border-color: #3C4EFA;
+  border-color: #325FEB;
 }
 .radio__control:has(:checked) .radio__indicator:after {
-  background: #3C4EFA;
+  background: #325FEB;
   opacity: 1;
 }
 .radio__control:has(:disabled) .radio__indicator {
@@ -953,7 +1141,7 @@ table tr:last-child td {
   transition: 0.2s;
 }
 .toggle__control input[type=checkbox]:checked {
-  background: #3C4EFA;
+  background: #325FEB;
 }
 .toggle__control input[type=checkbox]:checked:before {
   left: calc(100% - 20px);
@@ -997,7 +1185,7 @@ table tr:last-child td {
   gap: 0;
 }
 .chips.large .chips__control .icon.close {
-  color: #3C4EFA;
+  color: #325FEB;
   border-radius: 8px;
   padding: 4px;
 }
@@ -1047,7 +1235,7 @@ table tr:last-child td {
   gap: 0;
 }
 .chips.middle .chips__control .icon.close {
-  color: #3C4EFA;
+  color: #325FEB;
   border-radius: 8px;
   padding: 4px;
 }
@@ -1097,7 +1285,7 @@ table tr:last-child td {
   gap: 0;
 }
 .chips.small .chips__control .icon.close {
-  color: #3C4EFA;
+  color: #325FEB;
   border-radius: 8px;
   padding: 4px;
 }
@@ -1143,10 +1331,10 @@ table tr:last-child td {
   border-color: #788394;
 }
 .chips__control:active {
-  border-color: #3C4EFA;
+  border-color: #325FEB;
 }
 .chips:focus .chips-control {
-  border-color: #3C4EFA;
+  border-color: #325FEB;
   box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.5), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
 }
 @media only screen and (max-width: 649px) {
@@ -1172,7 +1360,7 @@ table tr:last-child td {
 }
 .chips.__input:focus .chips__control .close {
   background: #FFFFFF;
-  border: inset 2px solid #3C4EFA;
+  border: inset 2px solid #325FEB;
   box-shadow: 0px 0px 0px 4px rgba(198, 208, 238, 0.5), 0px 2px 4px 0px rgba(34, 34, 34, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
 }
 .chips.__input:focus .chips__control .close::after {
@@ -1180,7 +1368,7 @@ table tr:last-child td {
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  border: 1px solid #3C4EFA;
+  border: 1px solid #325FEB;
   position: absolute;
   box-sizing: border-box;
   top: 0;
@@ -1198,7 +1386,7 @@ table tr:last-child td {
 }
 .chips.loader i:first-child::before {
   content: "autorenew";
-  color: #3C4EFA;
+  color: #325FEB;
   width: 1em;
   height: 1em;
   display: block;
@@ -1215,11 +1403,11 @@ table tr:last-child td {
   pointer-events: none;
 }
 .chips:has(:checked) .chips__control {
-  border-color: #3C4EFA;
+  border-color: #325FEB;
   background: #EAEFFC;
 }
 .chips:has(:checked) .chips__control i {
-  color: #3C4EFA !important;
+  color: #325FEB !important;
 }
 .chips:has(:checked) .chips__control i.check {
   display: block !important;
@@ -1242,19 +1430,19 @@ table tr:last-child td {
   gap: 8px;
 }
 .snackbar i {
-  color: #3C4EFA;
+  color: #325FEB;
 }
 .snackbar i.close {
   color: #788394;
   cursor: pointer;
 }
 .snackbar.primary {
-  border-color: #3C4EFA;
+  border-color: #325FEB;
   background-color: #FFFFFF;
   color: #39414E;
 }
 .snackbar.primary i {
-  color: #3C4EFA;
+  color: #325FEB;
 }
 .snackbar.primary i.close {
   color: #B7BABE;
@@ -1342,7 +1530,7 @@ table tr:last-child td {
   gap: 0;
 }
 .label.primary {
-  background-color: #3C4EFA;
+  background-color: #325FEB;
   color: #FFFFFF;
 }
 .label.success {
@@ -1410,7 +1598,7 @@ table tr:last-child td {
   padding: 16px 24px;
 }
 .button.large.primary {
-  background-color: #3C4EFA;
+  background-color: #325FEB;
   color: #FFFFFF;
 }
 .button.large.secondary {
@@ -1438,7 +1626,7 @@ table tr:last-child td {
   height: calc(100% + 4px);
   transform: translateX(0);
   border-top-right-radius: 4px;
-  background-color: #5565FF;
+  background-color: #6185F0;
 }
 .button.large.secondary:hover {
   color: #202327;
@@ -1519,7 +1707,7 @@ table tr:last-child td {
   padding: 12px 16px;
 }
 .button.middle.primary {
-  background-color: #3C4EFA;
+  background-color: #325FEB;
   color: #FFFFFF;
 }
 .button.middle.secondary {
@@ -1547,7 +1735,7 @@ table tr:last-child td {
   height: calc(100% + 4px);
   transform: translateX(0);
   border-top-right-radius: 4px;
-  background-color: #5565FF;
+  background-color: #6185F0;
 }
 .button.middle.secondary:hover {
   color: #202327;
@@ -1628,7 +1816,7 @@ table tr:last-child td {
   padding: 8px 12px;
 }
 .button.small.primary {
-  background-color: #3C4EFA;
+  background-color: #325FEB;
   color: #FFFFFF;
 }
 .button.small.secondary {
@@ -1656,7 +1844,7 @@ table tr:last-child td {
   height: calc(100% + 4px);
   transform: translateX(0);
   border-top-right-radius: 4px;
-  background-color: #5565FF;
+  background-color: #6185F0;
 }
 .button.small.secondary:hover {
   color: #202327;
@@ -1734,8 +1922,8 @@ table tr:last-child td {
 }
 .button.primary.outline {
   background-color: #FFFFFF;
-  color: #3C4EFA;
-  box-shadow: inset 0 0 0 2px #3C4EFA;
+  color: #325FEB;
+  box-shadow: inset 0 0 0 2px #325FEB;
 }
 .button.secondary.outline {
   background-color: #FFFFFF;
@@ -1759,7 +1947,7 @@ table tr:last-child td {
 }
 .button.primary.transparent {
   background-color: transparent;
-  color: #3C4EFA;
+  color: #325FEB;
   box-shadow: none;
 }
 .button.secondary.transparent {
@@ -1891,4 +2079,313 @@ table tr:last-child td {
 }
 .form__row--error .error-text {
   display: block;
+}
+
+.badge {
+  height: 24px;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 700;
+  border-radius: 20px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.badge.large {
+  font-size: 16px;
+  height: 32px;
+  padding: 0 12px;
+}
+.badge.primary {
+  background-color: #E2E7F7;
+  color: #325FEB;
+}
+.badge.success {
+  background-color: #EEFAEA;
+  color: #52B530;
+}
+.badge.secondary {
+  background-color: #FEF2DF;
+  color: #F9AA34;
+}
+.badge.danger {
+  background-color: #F9E8E8;
+  color: #E85656;
+}
+.badge.caption {
+  background-color: #EFEFEF;
+  color: #788394;
+}
+.badge.middle {
+  font-size: 12px;
+  height: 24px;
+  padding: 0 8px;
+}
+.badge.primary {
+  background-color: #E2E7F7;
+  color: #325FEB;
+}
+.badge.success {
+  background-color: #EEFAEA;
+  color: #52B530;
+}
+.badge.secondary {
+  background-color: #FEF2DF;
+  color: #F9AA34;
+}
+.badge.danger {
+  background-color: #F9E8E8;
+  color: #E85656;
+}
+.badge.caption {
+  background-color: #EFEFEF;
+  color: #788394;
+}
+.badge.small {
+  font-size: 8px;
+  height: 16px;
+  padding: 0 8px;
+}
+.badge.primary {
+  background-color: #E2E7F7;
+  color: #325FEB;
+}
+.badge.success {
+  background-color: #EEFAEA;
+  color: #52B530;
+}
+.badge.secondary {
+  background-color: #FEF2DF;
+  color: #F9AA34;
+}
+.badge.danger {
+  background-color: #F9E8E8;
+  color: #E85656;
+}
+.badge.caption {
+  background-color: #EFEFEF;
+  color: #788394;
+}
+.badge.primary.pressed {
+  background-color: #325FEB;
+  color: #FFFFFF;
+}
+.badge.success.pressed {
+  background-color: #52B530;
+  color: #FFFFFF;
+}
+.badge.secondary.pressed {
+  background-color: #F9AA34;
+  color: #FFFFFF;
+}
+.badge.danger.pressed {
+  background-color: #E85656;
+  color: #FFFFFF;
+}
+.badge.caption.pressed {
+  background-color: #788394;
+  color: #FFFFFF;
+}
+.badge.primary.hover {
+  background-color: #C6D0EE;
+  color: #325FEB;
+}
+.badge.success.hover {
+  background-color: #DEF6D5;
+  color: #52B530;
+}
+.badge.secondary.hover {
+  background-color: #FDE4BF;
+  color: #F9AA34;
+}
+.badge.danger.hover {
+  background-color: #F2D1D1;
+  color: #E85656;
+}
+.badge.caption.hover {
+  background-color: #DFDFDF;
+  color: #788394;
+}
+.badge.large.circle {
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.middle.circle {
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.small.circle {
+  font-size: 8px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.large.notice {
+  font-size: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.large.notice svg {
+  display: none;
+}
+.badge.middle.notice {
+  font-size: 0;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.middle.notice svg {
+  display: none;
+}
+.badge.small.notice {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+.badge.small.notice svg {
+  display: none;
+}
+.badge--line {
+  display: inline-flex;
+}
+
+.tooltip {
+  cursor: help;
+  position: relative;
+}
+.tooltip__wrapper {
+  opacity: 0;
+  cursor: default;
+  pointer-events: none;
+  position: absolute;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  z-index: 10;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  background: #39414E;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.15), 0px 0px 1px 0px rgba(0, 0, 0, 0.4);
+}
+.tooltip__wrapper::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.tooltip__wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 16px;
+}
+.tooltip__title {
+  margin-bottom: 4px;
+  color: #FFFFFF;
+  font: 600 16px/24px "Raleway", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.tooltip__text {
+  color: #FFFFFF;
+  font: 400 12px/16px "Raleway", sans-serif;
+  font-variant-numeric: lining-nums proportional-nums;
+}
+.tooltip:hover .tooltip__wrapper {
+  opacity: 1;
+}
+.tooltip--focus:hover .tooltip__wrapper {
+  pointer-events: all;
+}
+.tooltip[data-position=top] .tooltip__wrapper {
+  bottom: 100%;
+  left: calc(100% / 2);
+  margin-bottom: 12px;
+}
+.tooltip[data-position=top] .tooltip__wrapper::before {
+  top: 100%;
+  left: calc(100% / 2);
+  transform: translateX(-50%);
+  border-width: 8px 8px 0 8px;
+  border-color: #39414E transparent transparent transparent;
+}
+.tooltip[data-position=top] .tooltip__wrapper::after {
+  top: 100%;
+  left: calc(100% / 2);
+  transform: translateX(-50%);
+}
+.tooltip[data-position=bottom] .tooltip__wrapper {
+  top: 100%;
+  left: calc(100% / 2);
+  margin-top: 12px;
+}
+.tooltip[data-position=bottom] .tooltip__wrapper::before {
+  bottom: 100%;
+  left: calc(100% / 2);
+  transform: translateX(-50%);
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent #39414E transparent;
+}
+.tooltip[data-position=bottom] .tooltip__wrapper::after {
+  bottom: 100%;
+  left: calc(100% / 2);
+  transform: translateX(-50%);
+}
+.tooltip[data-position=left] .tooltip__wrapper {
+  top: calc(100% / 2);
+  right: 100%;
+  transform: translateY(-50%);
+  margin: calc(-4px / 2) 12px 0 0;
+}
+.tooltip[data-position=left] .tooltip__wrapper::before {
+  top: calc(100% / 2);
+  left: 100%;
+  transform: translateY(-50%);
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #39414E;
+}
+.tooltip[data-position=left] .tooltip__wrapper::after {
+  top: 0;
+  width: 24px;
+  height: 100%;
+  left: 100%;
+  transform: translateY(0);
+}
+.tooltip[data-position=right] .tooltip__wrapper {
+  top: calc(100% / 2);
+  left: 100%;
+  transform: translateY(-50%);
+  margin: calc(-4px / 2) 0 0 12px;
+}
+.tooltip[data-position=right] .tooltip__wrapper::before {
+  top: calc(100% / 2);
+  right: 100%;
+  transform: translateY(-50%);
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #39414E transparent transparent;
+}
+.tooltip[data-position=right] .tooltip__wrapper::after {
+  top: 0;
+  width: 24px;
+  height: 100%;
+  right: 100%;
+  transform: translateY(0);
 }

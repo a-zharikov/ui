@@ -1,5 +1,6 @@
 $tr: transparent;
 
+// Main
 $white:    #FFFFFF;
 $pages:    #EAEAEA;
 $object:   #EAEFFC;
@@ -9,21 +10,37 @@ $caption:  #788394;
 $body:     #39414E;
 $headline: #202327;
 
-$navy:   #0079FA;
-$aqua:   #00B0FA;
-$violet: #6D4EFA;
-
-$primary: #3C4EFA;
+// primary
+$primary: #325FEB;
 $success: #52B530;
 $waring:  #F9AA34;
 $danger:  #E85656;
+$tertiary: #4E555F;
 
-$primary-hover: #5565FF;
+// Hover
+$primary-hover: #6185F0;
 $success-hover: #8DDA72;
 $waring-hover:  #FABF66;
 $danger-hover:  #EE8181;
+$headline-hover: #4E555F;
+$violet-hover:   #8F52DC;
 
+// Pressed
 $primary-pressed: #2635CD;
 $success-pressed: #408D25;
 $waring-pressed:  #F29408;
 $danger-pressed:  #E12828;
+
+// Secondary
+$secondary-gray:       #DFDFDF;
+$secondary-gray-05:    #EFEFEF;
+$secondary-primary:    #C6D0EE;
+$secondary-primary-05: #E2E7F7;
+$secondary-success:    #DEF6D5;
+$secondary-success-05: #EEFAEA;
+$secondary-waring:     #FDE4BF;
+$secondary-waring-05:  #FEF2DF;
+$secondary-danger:     #F2D1D1;
+$secondary-danger-05:  #F9E8E8;
+
+$npm: #CB0001;

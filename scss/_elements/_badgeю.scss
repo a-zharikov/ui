@@ -1,0 +1,38 @@
+// Цвета
+$colors: (
+  primary: (background-color: $secondary-primary-05, color: $primary),
+  success: (background-color: $secondary-success-05, color: $success),
+  secondary: (background-color: $secondary-waring-05, color: $waring),
+  danger: (background-color: $secondary-danger-05, color: $danger),
+  caption: (background-color: $secondary-gray-05, color: $caption)
+);
+
+$sizes: (
+  large: (height: $zui-32, padding: 0 $zui-12, font-size: $zui-16),
+  middle: (height: $zui-24, padding: 0 $zui-8, font-size: $zui-12),
+  small: (height: $zui-16, padding: 0 $zui-8, font-size: $zui-8)
+);
+
+.badge {
+  height: $zui-24;
+  font-size: $zui-16;
+  line-height: $zui-100p;
+  font-weight: $bold;
+  border-radius: $zui-20;
+  @include flex($rw,$cr,$cr,0);
+
+  @each $size-name, $size-map in $sizes {
+    &.#{$size-name} {
+      font-size: map-get($size-map, font-size);
+      height: map-get($size-map, height);
+      padding: map-get($size-map, padding);
+    }
+
+    @each $color-name, $color-map in $colors {
+      &.#{$color-name} {
+        background-color: map-get($color-map, background-color);
+        color: map-get($color-map, color);
+      }
+    }
+  }
+}

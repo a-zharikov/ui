@@ -20,3 +20,9 @@
     color: $color;
   }
 }
+
+@mixin field-sizing($line-height: null, $min-height: null) {
+  line-height: if($line-height != null, $line-height, 1.5);
+  field-sizing: content;
+  min-height: if($min-height != null, $min-height * 1lh, 3lh);
+}

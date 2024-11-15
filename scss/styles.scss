@@ -1,9 +1,11 @@
 @import '_variables/color';
 @import '_variables/size';
+@import '_variables/shadow';
 @import '_variables/fonts';
 @import '_variables/_typography';
 
 @import '_mixins/align';
+@import '_mixins/block';
 @import '_mixins/breakpoint';
 @import '_mixins/decoration';
 @import '_mixins/flex';
@@ -19,7 +21,8 @@
 @import '_global/reset';
 @import '_global/base';
 
-@import '_elements/typography.scss';
+@import '_elements/typography';
+@import '_elements/badge';
 @import '_elements/input';
 @import '_elements/textarea';
 @import '_elements/checkbox';
@@ -30,3 +33,5 @@
 @import '_elements/label';
 @import '_elements/button';
 @import '_elements/form';
+@import '_elements/badge';
+@import '_elements/tooltip';
