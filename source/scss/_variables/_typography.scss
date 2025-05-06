@@ -1,3 +1,6 @@
+// Font family
+$ff: 'Helvetica';
+
 // Font weight
 $light: 300;
 $regular: 400;
@@ -23,7 +26,9 @@ $bold-x5: $semibold #{$zui-20}/#{$zui-28} $ff;
 $normal-x4: $regular #{$zui-16}/#{$zui-24} $ff;
 $bold-x4: $semibold #{$zui-16}/#{$zui-24} $ff;
 $normal-x3: $regular #{$zui-12}/#{$zui-16} $ff;
+$normal-x35: $regular #{$zui-14}/#{$zui-16} $ff;
 $bold-x3: $semibold #{$zui-12}/#{$zui-16} $ff;
+$bold-x35: $semibold #{$zui-14}/#{$zui-16} $ff;
 
 $large: $semibold #{$zui-24}/#{$zui-24} $ff;
 $middle: $semibold #{$zui-20}/#{$zui-20} $ff;
