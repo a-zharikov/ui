@@ -1,7 +1,0 @@
-@mixin theme($property, $color-light, $color-dark) {
-	#{$property}: $color-light;
-
-	html[data-theme="dark"] & {
-		#{$property}: $color-dark;
-	}
-}
