@@ -57,7 +57,7 @@
 }
 @font-face {
   font-family: "Material Symboldls Rounded";
-  src: url(fonts/icon/MaterialSymbolsRounded.ttf) format("ttf"), url(fonts/icon/MaterialSymbolsRounded.woff) format("woff");
+  src: url(fonts/fonts-icon/MaterialSymbolsRounded.ttf) format("ttf"), url(fonts/fonts-icon/MaterialSymbolsRounded.woff) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -318,8 +318,7 @@ html body {
   background-color: #F8F8F8;
   height: 100%;
   overflow-x: hidden;
-  color: #202327;
-  font: 20px/28px "Raleway", sans-serif;
+  font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
@@ -333,49 +332,42 @@ html body {
 
 h1 {
   margin-bottom: 20px;
-  color: #202327;
   font: 700 40px/44px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 h2 {
   margin-bottom: 20px;
-  color: #202327;
   font: 700 32px/40px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 h3 {
   margin-bottom: 20px;
-  color: #202327;
   font: 700 24px/32px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 h4 {
   margin-bottom: 20px;
-  color: #202327;
   font: 700 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 h5 {
   margin-bottom: 20px;
-  color: #202327;
   font: 700 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 h6 {
   margin-bottom: 20px;
-  color: #202327;
   font: 700 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 
 p {
-  color: #202327;
-  font: 20px/28px "Raleway", sans-serif;
+  font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 p:not(p:last-child) {
@@ -399,8 +391,7 @@ ul:not(ul:last-child, ol:last-child), ol:not(ul:last-child, ol:last-child) {
   margin-bottom: 20px;
 }
 ul li, ol li {
-  color: #202327;
-  font: 20px/28px "Raleway", sans-serif;
+  font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   display: flex;
   flex-direction: row;
@@ -437,8 +428,7 @@ blockquote {
   border-radius: 16px;
   box-sizing: border-box;
   background: #EAEAEA;
-  color: #202327;
-  font: 20px/28px "Raleway", sans-serif;
+  font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   font-style: italic;
   position: relative;
@@ -450,9 +440,9 @@ blockquote:not(blockquote:last-child) {
   margin-bottom: 20px;
 }
 blockquote::before, blockquote::after {
-  color: #788394;
   font: 700 64px/64px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #788394;
   font-family: "Times New Roman", Times, serif;
   position: absolute;
   opacity: 0.2;
@@ -469,16 +459,15 @@ blockquote::after {
 }
 
 code {
-  color: #788394;
   font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #788394;
   padding: 4px 8px;
   border-radius: 4px;
   background: #EAEAEA;
 }
 
 pre {
-  color: #202327;
   font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   padding: 16px;
@@ -516,15 +505,13 @@ table {
 table th {
   border-bottom: 2px solid #325FEB;
   padding: 4px;
-  color: #202327;
-  font: 20px/28px "Raleway", sans-serif;
+  font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 table td {
   border-bottom: 1px solid #B7BABE;
   padding: 4px;
-  color: #202327;
-  font: 20px/28px "Raleway", sans-serif;
+  font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 table tr:last-child td {
@@ -719,7 +706,6 @@ table tr:last-child td {
   border-radius: 12px;
   box-sizing: border-box;
   padding: 8px 16px;
-  color: #202327;
   font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   -webkit-transition: all 500ms ease-in-out;
@@ -743,7 +729,6 @@ table tr:last-child td {
   box-sizing: border-box;
   padding: 4px;
   background: #FFFFFF;
-  color: #202327;
   font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
@@ -789,21 +774,21 @@ table tr:last-child td {
 .input-placeholder .icon + input + label {
   left: 32px;
   pointer-events: none;
-  color: #788394;
   font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #788394;
 }
 .input-placeholder .icon.__left {
   position: absolute;
   top: 50%;
-  left: 0%;
+  left: 0;
   transform: translate(0, -50%);
   left: 8px;
 }
 .input-placeholder .icon.__right {
   position: absolute;
   top: 50%;
-  right: 0%;
+  right: 0;
   transform: translate(0, -50%);
   right: 12px;
 }
@@ -816,12 +801,12 @@ table tr:last-child td {
   transition: all 500ms ease-in-out;
 }
 .input-placeholder label {
-  color: #788394;
   font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #788394;
   position: absolute;
   top: 50%;
-  left: 0%;
+  left: 0;
   transform: translate(0, -50%);
   left: 16px;
   -webkit-transition: all 500ms ease-in-out;
@@ -863,9 +848,9 @@ table tr:last-child td {
 .input-placeholder input[type=text]:focus + label, .input-placeholder input[type=text]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=password]:focus + label, .input-placeholder input[type=password]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=email]:focus + label, .input-placeholder input[type=email]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=number]:focus + label, .input-placeholder input[type=number]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=search]:focus + label, .input-placeholder input[type=search]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=tel]:focus + label, .input-placeholder input[type=tel]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=url]:focus + label, .input-placeholder input[type=url]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=date]:focus + label, .input-placeholder input[type=date]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=datetime-local]:focus + label, .input-placeholder input[type=datetime-local]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=time]:focus + label, .input-placeholder input[type=time]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=month]:focus + label, .input-placeholder input[type=month]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label, .input-placeholder input[type=week]:focus + label, .input-placeholder input[type=week]:not(.input-placeholder input[type=text]:placeholder-shown, .input-placeholder input[type=password]:placeholder-shown, .input-placeholder input[type=email]:placeholder-shown, .input-placeholder input[type=number]:placeholder-shown, .input-placeholder input[type=search]:placeholder-shown, .input-placeholder input[type=tel]:placeholder-shown, .input-placeholder input[type=url]:placeholder-shown, .input-placeholder input[type=date]:placeholder-shown, .input-placeholder input[type=datetime-local]:placeholder-shown, .input-placeholder input[type=time]:placeholder-shown, .input-placeholder input[type=month]:placeholder-shown, .input-placeholder input[type=week]:placeholder-shown) + label {
   top: calc(4px / 2);
   transform: translate(0, 0);
-  color: #39414E;
   font: 400 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #39414E;
 }
 .input-placeholder input[type=text]:focus + label + .__hover, .input-placeholder input[type=password]:focus + label + .__hover, .input-placeholder input[type=email]:focus + label + .__hover, .input-placeholder input[type=number]:focus + label + .__hover, .input-placeholder input[type=search]:focus + label + .__hover, .input-placeholder input[type=tel]:focus + label + .__hover, .input-placeholder input[type=url]:focus + label + .__hover, .input-placeholder input[type=date]:focus + label + .__hover, .input-placeholder input[type=datetime-local]:focus + label + .__hover, .input-placeholder input[type=time]:focus + label + .__hover, .input-placeholder input[type=month]:focus + label + .__hover, .input-placeholder input[type=week]:focus + label + .__hover {
   opacity: 1;
@@ -888,9 +873,9 @@ table tr:last-child td {
   box-sizing: border-box;
   background: transparent;
   text-align: center;
-  color: #788394;
   font: 600 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #788394;
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
   appearance: textfield;
@@ -930,7 +915,6 @@ table tr:last-child td {
   resize: vertical;
   position: relative;
   z-index: 1;
-  color: #202327;
   font: 400 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   -webkit-transition: all 500ms ease-in-out;
@@ -1017,20 +1001,18 @@ table tr:last-child td {
   margin-top: calc(-4px/2);
 }
 .checkbox__title {
-  color: #202327;
   font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .checkbox__text {
-  color: #788394;
   font: 400 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #788394;
 }
 
 .radio__control {
   cursor: pointer;
   margin-bottom: 20px;
-  color: #202327;
   font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   display: flex;
@@ -1096,20 +1078,18 @@ table tr:last-child td {
   margin-top: calc(-4px/2);
 }
 .radio__title {
-  color: #202327;
   font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .radio__text {
-  color: #788394;
   font: 400 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #788394;
 }
 
 .toggle__control {
   cursor: pointer;
   margin-bottom: 20px;
-  color: #202327;
   font: 400 20px/28px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
   display: flex;
@@ -1420,9 +1400,9 @@ table tr:last-child td {
   padding: 8px 12px;
   border: 2px solid #FFFFFF;
   box-sizing: border-box;
-  color: #39414E;
   font: 600 16px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #39414E;
   display: inline-flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1520,9 +1500,9 @@ table tr:last-child td {
   background: #B7BABE;
   padding: 0 4px;
   box-sizing: border-box;
-  color: #39414E;
   font: 600 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #39414E;
   display: inline-flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -2063,15 +2043,14 @@ table tr:last-child td {
   gap: 4px;
 }
 .form__row label {
-  color: #202327;
   font: 600 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
 }
 .form__row .error-text {
   display: none;
-  color: #E85656;
   font: 400 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #E85656;
 }
 .form__row--error input, .form__row--error textarea {
   border-color: #E85656;
@@ -2300,14 +2279,14 @@ table tr:last-child td {
 }
 .tooltip__title {
   margin-bottom: 4px;
-  color: #FFFFFF;
   font: 600 16px/24px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #FFFFFF;
 }
 .tooltip__text {
-  color: #FFFFFF;
   font: 400 12px/16px "Raleway", sans-serif;
   font-variant-numeric: lining-nums proportional-nums;
+  color: #FFFFFF;
 }
 .tooltip:hover .tooltip__wrapper {
   opacity: 1;

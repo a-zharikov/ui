@@ -1,5 +1,13 @@
-@mixin text($font, $color: null) {
-  color: if($color != null, $color, $headline);
+@mixin text($font, $colors...) {
   font: $font;
   font-variant-numeric: lining-nums proportional-nums;
+
+  // Проверяем количество переданных цветов
+  @if length($colors) == 1 {
+    color: nth($colors, 1);
+  } @else if length($colors) == 2 {
+    @include theme(color, nth($colors, 1), nth($colors, 2));
+  } @else if length($colors) == 3 {
+    @include theme(color, nth($colors, 1), nth($colors, 2), nth($colors, 3));
+  }
 }
