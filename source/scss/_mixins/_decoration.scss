@@ -10,13 +10,13 @@
   @include border-opacity(border-color, $bc, $opacity);
 }
 
-@mixin break_word(){
+@mixin break-word(){
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
 }
 
-@mixin text_count($count, $line-height: normal, $include-break-word: true) {
+@mixin text-count($count, $line-height: normal, $include-break-word: true) {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -25,6 +25,6 @@
   line-height: $line-height;
 
   @if $include-break-word {
-    @include break_word();
+    @include break-word();
   }
 }
