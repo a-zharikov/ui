@@ -1,6 +1,6 @@
 {
   "name": "zharikov-ui",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "",
   "main": "styles.scss",
   "repository": {
@@ -12,11 +12,9 @@
     "variables",
     "mixin",
     "breakpoint",
-    "fonts",
     "reset",
     "grid",
     "flex",
-    "button",
     "form"
   ],
   "author": "Alexander Zharikov <mail@zharikov.design>",
