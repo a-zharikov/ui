@@ -85,6 +85,21 @@
       "oAP" : "\/build\/index.html",
       "oF" : 0
     },
+    "\/source\/scss\/_animations\/_rotation.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/build\/scss\/_animations\/_rotation.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/source\/scss\/_global\/_base.scss" : {
       "aP" : 0,
       "bl" : 0,
